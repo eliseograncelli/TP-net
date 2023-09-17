@@ -73,9 +73,9 @@ namespace BusinessLogic
         } // OK
 
 
-        public UsuarioBE Buscador(string email, string contraseña)   // OK
+        public UsuarioBE Buscador(UsuarioBE usuario)   // OK
         {
-            UsuarioBE usuario = new UsuarioBE(email, contraseña);
+            
             UsuarioData usu = new UsuarioData();
 
             return usu.BuscarUsu(usuario);

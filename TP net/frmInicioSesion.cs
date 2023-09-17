@@ -21,9 +21,18 @@ namespace TP_net
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            UsuarioBE usu = new UsuarioBE();
+            UsuarioBE usu = new UsuarioBE(txtEmail.Text, txtContraseña.Text);
             UsuarioBL us = new UsuarioBL();
-            usu = us.Buscador(txtEmail.Text, txtContraseña.Text);
+            UsuarioBE usuario = us.Buscador(usu);
+
+            if (usuario != null )
+            {
+                MessageBox.Show("Usuario encontrado");
+            }
+            else
+            {
+                MessageBox.Show("No se encontro el usuario");
+            }
         }
     }
 }

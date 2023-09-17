@@ -1,4 +1,6 @@
 ﻿using System.Data;
+using System.Reflection.PortableExecutable;
+using BusinessEntities;
 using Microsoft.Data.SqlClient;
 
 namespace DataAccess
@@ -6,7 +8,7 @@ namespace DataAccess
     public class Conexion
     {
         // private string cadenaConexion = $"Data Source=PC-Fili; Initial Catalog=dbSistema; Integrated Security =True";
-        private string cadenaConexion = $"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True";
+        private string cadenaConexion = $"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true";
         SqlConnection conexion;
 
 
@@ -82,7 +84,24 @@ namespace DataAccess
                 conexion.Close();
                 return cadena; */
             }
-            catch { return reader; }
+            catch {return reader; }
         }
+
+        // ******************************
+
+        public SqlDataReader Ejecutador(string sentencia)
+        {
+
+            string cadena = sentencia;
+            SqlCommand comando = new SqlCommand(cadena, conexion);
+            comando.Connection = EstablecerConexion();
+            conexion.Open();
+            SqlDataReader r = comando.ExecuteReader();
+            return r;
+        }
+
+
+        // **************************
+
     }
 }
