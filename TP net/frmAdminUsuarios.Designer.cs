@@ -19,7 +19,6 @@
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -41,7 +40,6 @@
             btnBorrar = new Button();
             btnCancelar = new Button();
             dgvUsuarios = new DataGridView();
-            txtId = new Label();
             txtDNI = new TextBox();
             label4 = new Label();
             cbxTipo = new ComboBox();
@@ -50,6 +48,8 @@
             label6 = new Label();
             label7 = new Label();
             txtApellido = new TextBox();
+            label8 = new Label();
+            txtId = new TextBox();
             ((System.ComponentModel.ISupportInitialize)picFoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             SuspendLayout();
@@ -170,6 +170,7 @@
             btnCancelar.TabIndex = 11;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // dgvUsuarios
             // 
@@ -180,15 +181,6 @@
             dgvUsuarios.RowHeadersWidth = 62;
             dgvUsuarios.Size = new Size(675, 189);
             dgvUsuarios.TabIndex = 0;
-            // 
-            // txtId
-            // 
-            txtId.AutoSize = true;
-            txtId.Location = new Point(127, 7);
-            txtId.Margin = new Padding(2, 0, 2, 0);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(0, 15);
-            txtId.TabIndex = 12;
             // 
             // txtDNI
             // 
@@ -210,7 +202,7 @@
             // cbxTipo
             // 
             cbxTipo.FormattingEnabled = true;
-            cbxTipo.Items.AddRange(new object[] { "Cliente", "Administrador" });
+            cbxTipo.Items.AddRange(new object[] { "Cliente", "Mayorista", "Vendedor", "Administrador" });
             cbxTipo.Location = new Point(127, 143);
             cbxTipo.Name = "cbxTipo";
             cbxTipo.Size = new Size(191, 23);
@@ -262,12 +254,31 @@
             txtApellido.Size = new Size(156, 23);
             txtApellido.TabIndex = 20;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.ForeColor = SystemColors.ControlLightLight;
+            label8.Location = new Point(333, 173);
+            label8.Name = "label8";
+            label8.Size = new Size(21, 15);
+            label8.TabIndex = 21;
+            label8.Text = "ID:";
+            // 
+            // txtId
+            // 
+            txtId.Location = new Point(333, 190);
+            txtId.Name = "txtId";
+            txtId.Size = new Size(156, 23);
+            txtId.TabIndex = 22;
+            // 
             // frmAdminUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(709, 478);
+            Controls.Add(txtId);
+            Controls.Add(label8);
             Controls.Add(txtApellido);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -276,7 +287,6 @@
             Controls.Add(cbxTipo);
             Controls.Add(label4);
             Controls.Add(txtDNI);
-            Controls.Add(txtId);
             Controls.Add(dgvUsuarios);
             Controls.Add(btnCancelar);
             Controls.Add(btnBorrar);
@@ -314,7 +324,6 @@
         private Button btnBorrar;
         private Button btnCancelar;
         private DataGridView dgvUsuarios;
-        private Label txtId;
         private TextBox txtDNI;
         private Label label4;
         private ComboBox cbxTipo;
@@ -323,5 +332,7 @@
         private Label label6;
         private Label label7;
         private TextBox txtApellido;
+        private Label label8;
+        private TextBox txtId;
     }
 }
