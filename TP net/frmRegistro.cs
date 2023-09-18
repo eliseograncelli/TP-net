@@ -34,7 +34,7 @@ namespace TP_net
                 }
 
             }
-            if (txtDni.Text == null | txtNombre == null | txtApellido.Text == null | txtEmail.Text == null | txtContraseña.Text == null)
+            if (txtDni.Text == null || txtNombre == null || txtApellido.Text == null || txtEmail.Text == null || txtContraseña.Text == null)
             {
                 MessageBox.Show("DEBE INGRESAR TODOS LOS DATOS");
             }
