@@ -34,9 +34,9 @@ namespace TP_net
                 }
 
             }
-            if (txtDni.Text == null | txtNombre == null | txtApellido.Text == null | txtEmail.Text == null | txtContraseña.Text == null)
+            if (txtDni.Text == "" || txtNombre.Text == "" || txtApellido.Text == "" || txtEmail.Text == "" || txtContraseña.Text == "")
             {
-                MessageBox.Show("DEBE INGRESAR TODOS LOS DATOS");
+                MessageBox.Show("Todos los campos deben estar completos");
             }
             else
             {
@@ -50,11 +50,12 @@ namespace TP_net
         {
             if (ckbMayorista.Checked == true)
             {
-                ckbVendedor.Enabled = false;
+                ckbVendedor.ForeColor = Color.Gray;
+                ckbVendedor.Checked = false;
             }
             else
             {
-                ckbVendedor.Enabled = true;
+                ckbVendedor.ForeColor = Color.White;
             }
         }
 
@@ -62,11 +63,13 @@ namespace TP_net
         {
             if (ckbVendedor.Checked == true)
             {
-                ckbMayorista.Enabled = false;
+                ckbMayorista.ForeColor = Color.Gray;
+                ckbMayorista.Checked = false;
+
             }
             else
             {
-                ckbMayorista.Enabled = true;
+                ckbMayorista.ForeColor = Color.White;
             }
         }
     }
