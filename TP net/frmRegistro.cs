@@ -34,9 +34,16 @@ namespace TP_net
                 }
 
             }
-            UsuarioBE usuNuevo = new UsuarioBE(int.Parse(txtDni.Text), txtNombre.Text, txtApellido.Text, txtEmail.Text, null, txtContraseña.Text, tipo);
-            UsuarioBL usuario = new UsuarioBL();
-            usuario.Agregar(usuNuevo);
+            if (txtDni.Text == null | txtNombre == null | txtApellido.Text == null | txtEmail.Text == null | txtContraseña.Text == null)
+            {
+                MessageBox.Show("DEBE INGRESAR TODOS LOS DATOS");
+            }
+            else
+            {
+                UsuarioBE usuNuevo = new UsuarioBE(int.Parse(txtDni.Text), txtNombre.Text, txtApellido.Text, txtEmail.Text, null, txtContraseña.Text, tipo);
+                UsuarioBL usuario = new UsuarioBL();
+                usuario.Agregar(usuNuevo);
+            }
         }
 
         private void ckbMayorista_CheckedChanged(object sender, EventArgs e)
