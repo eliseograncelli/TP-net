@@ -42,7 +42,7 @@ namespace TP_net
             {
                 UsuarioBE usuNuevo = new UsuarioBE(int.Parse(txtDni.Text), txtNombre.Text, txtApellido.Text, txtEmail.Text, null, txtContraseña.Text, tipo);
                 UsuarioBL usuario = new UsuarioBL();
-                usuario.Agregar(usuNuevo);
+                MessageBox.Show(usuario.Agregar(usuNuevo));
             }
         }
 

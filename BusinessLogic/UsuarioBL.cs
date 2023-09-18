@@ -12,16 +12,16 @@ namespace BusinessLogic
             conexion = new Conexion();
         }
 
-        public void Agregar(UsuarioBE usuNuevo)
+        public string Agregar(UsuarioBE usuNuevo)
         {
             UsuarioData usuData = new UsuarioData();
             if (usuData.GuardarUsuario(usuNuevo) == "true")
             {
-                // MessageBox.Show("USUARIO {0} CREADO EXITOSAMENTE", usuNuevo.Nombre);
+                return usuNuevo.Nombre;
             }
             else
             {
-                // MessageBox.Show("ERROR AL GUARDAR EMPLEADO " +usuData.GuardarUsuario(usuNuevo));
+                return usuData.GuardarUsuario(usuNuevo);
             }
         } // OK
 
@@ -39,29 +39,12 @@ namespace BusinessLogic
             }
         } // OK
 
-        public int Modificar(int id, int dni, string nombre, string Apellido, string email, string password, string tipo, string estado)
+        public string Modificar(UsuarioBE usu)
         {
-            int nuevoDNI = dni;
-            string nuevoNombre = nombre;
-            string nuevoApe = Apellido;
-            string nuevoEmail = email;
-            string nuevaPas = password;
-            string nuevoTipo = tipo;
-            string nuevoEstado = estado;
-
-            UsuarioBE usu = new UsuarioBE(nuevoDNI, nuevoNombre, nuevoApe, nuevoEmail, null, nuevaPas, nuevoTipo, nuevoEstado);
-
             UsuarioData usuData = new UsuarioData();
-            if (usuData.Modificar(usu) == 1)
-            {
-                // MessageBox.Show("USUARIO MODIFICADO CON EXITO");
-            }
-            else
-            {
-                //  MessageBox.Show("NO SE PUDO MODIFICAR EL USUARIO");
-            }
 
-            return 1;
+            return usuData.Modificar(usu);
+
         } // OK
 
 

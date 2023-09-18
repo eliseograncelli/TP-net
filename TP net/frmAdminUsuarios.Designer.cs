@@ -150,6 +150,7 @@
             btnModificar.TabIndex = 9;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
             // 
             // btnBorrar
             // 
@@ -181,6 +182,7 @@
             dgvUsuarios.RowHeadersWidth = 62;
             dgvUsuarios.Size = new Size(675, 189);
             dgvUsuarios.TabIndex = 0;
+            dgvUsuarios.CellMouseClick += dgvUsuarios_CellMouseClick;
             // 
             // txtDNI
             // 

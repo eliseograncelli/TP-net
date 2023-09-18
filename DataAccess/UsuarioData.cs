@@ -32,17 +32,17 @@ namespace DataAccess
             return 1;
         } // OK
 
-        public int Modificar(UsuarioBE usu)
+        public string Modificar(UsuarioBE usu)
         {
-            conexion.Pruebaconectar(
-                "Update Empleado Set nombre='"
-                + usu.Nombre + "',dni='" + usu.DNI + "',email='" + usu.Email + "' apellido= '" + usu.Apellido + "',password='" + usu.Password + "', tipo= '" + usu.Tipo + "', estado= '" + usu.Estado + "' Where id =" + usu.Id);
-            return 1;
+           return conexion.Pruebaconectar(
+                "Update Usuario Set nombre='"
+                + usu.Nombre + "',dni='" + usu.DNI + "',email='" + usu.Email + "' ,apellido= '" + usu.Apellido + "',password='" + usu.Password + "', tipo= '" + usu.Tipo + "', estado= '" + usu.Estado + "' Where id =" + usu.Id);
+           
         } // OK
 
         public DataSet MostrarUsuarios()
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * FROM Empleado");
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM Usuario");
             return conexion.EjecutarSentencia(sentencia);
         } // OK
 

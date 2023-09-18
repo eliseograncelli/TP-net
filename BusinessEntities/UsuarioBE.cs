@@ -1,4 +1,6 @@
-﻿namespace BusinessEntities
+﻿using System.Net;
+
+namespace BusinessEntities
 {
     public class UsuarioBE
     {
@@ -63,6 +65,19 @@
                 this.Tipo = tipo;
             }
             this.Estado = "Inactivo";
+        }
+
+        public UsuarioBE(int id, int dNI, string nombre, string apellido, string email, byte[] foto, string password, string tipo, string estado)
+        {
+            Id = id;
+            DNI = dNI;
+            Nombre = nombre;
+            Apellido = apellido;
+            Email = email;
+            Password = password;
+            Foto = foto;
+            Tipo = tipo;
+            Estado = estado;
         }
 
         public UsuarioBE(string email, string password)
