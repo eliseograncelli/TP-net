@@ -46,85 +46,6 @@ namespace DataAccess
             return conexion.EjecutarSentencia(sentencia);
         } // OK
 
-
-       /* public UsuarioBE BuscarUsu(UsuarioBE usu)
-        {
-            
-            try
-            {
-                // SqlCommand comando = new SqlCommand("SELECT * FROM Usuario WHERE email = '" + usu.Email + "' AND password = '" + usu.Password + "'", conexion.EstablecerConexion());
-                 SqlCommand comando = new SqlCommand("SELECT* FROM Usuario WHERE email = 'juan@gmail.com' AND password = 'eee'");
-
-               // string cadena = "SELECT* FROM Usuario WHERE email = 'juan@gmail.com' AND password = 'eee'";
-                
-                SqlDataReader r = comando.ExecuteReader();
-
-                if (r.Read())
-                {
-                    UsuarioBE usuarioEncontrado = new UsuarioBE();
-                    usuarioEncontrado.Email = usu.Email;
-                    usuarioEncontrado.Password = usu.Password;
-                    usuarioEncontrado.Nombre = r["nombre"].ToString();
-                    usuarioEncontrado.Apellido = r["apellido"].ToString();
-                    usuarioEncontrado.Estado = r["estado"].ToString();
-                    usuarioEncontrado.Tipo = r["tipo"].ToString();
-                    usuarioEncontrado.DNI = (int)r["dni"];
-                    usuarioEncontrado.Id = (int)r["id"];
-                    return usuarioEncontrado;
-                
-                }
-                else
-                {
-                    // Usuario no encontrado
-                    
-                    return null;
-                }
-            }
-            catch (Exception ex)
-            {
-                // MENSAJE EXCEPCION
-                return null;
-            }
-        } */
-
-
-        // *********************
-
-      /*  public UsuarioBE BuscarUsu(UsuarioBE usu)
-        {
-
-            SqlConnection conexion = new SqlConnection($"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True; ;TrustServerCertificate=true");
-
-
-            conexion.Open();
-            string cadena = "SELECT* FROM Usuario WHERE email = 'juan@gmail.com' AND password = 'eee'";
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            SqlDataReader r = comando.ExecuteReader();
-
-                if (r.Read())
-                {
-                    UsuarioBE usuarioEncontrado = new UsuarioBE();
-                    usuarioEncontrado.Email = usu.Email;
-                    usuarioEncontrado.Password = usu.Password;
-                    usuarioEncontrado.Nombre = r["nombre"].ToString();
-                    usuarioEncontrado.Apellido = r["apellido"].ToString();
-                    usuarioEncontrado.Estado = r["estado"].ToString();
-                    usuarioEncontrado.Tipo = r["tipo"].ToString();
-                    usuarioEncontrado.DNI = (int)r["dni"];
-                    usuarioEncontrado.Id = (int)r["id"];
-                    return usuarioEncontrado;
-
-                }
-                else
-                {
-                    // Usuario no encontrado
-
-                    return null;
-                }
-            } */  // OK
-
-        // *********************
-
         public UsuarioBE BuscarUsu(UsuarioBE usu)
         {
             SqlDataReader r;
@@ -152,6 +73,6 @@ namespace DataAccess
 
                 return null;
             }
-        }
+        }  // OK
     }
 }

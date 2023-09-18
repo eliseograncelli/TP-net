@@ -46,7 +46,7 @@
             this.Estado = estado;
         }
 
-        public UsuarioBE(int dni, string nombre, string apellido, string email, byte[] foto, string password)
+        public UsuarioBE(int dni, string nombre, string apellido, string email, byte[] foto, string password, string tipo)
         {
             this.DNI = dni;
             this.Nombre = nombre;
@@ -54,7 +54,14 @@
             this.Email = email;
             this.Password = password;
             this.Foto = foto;
-            this.Tipo = "Cliente";
+            if (tipo == null)
+            {
+                this.Tipo = "Cliente";
+            }
+            else
+            {
+                this.Tipo = tipo;
+            }
             this.Estado = "Inactivo";
         }
 

@@ -25,7 +25,7 @@ namespace TP_net
             UsuarioBL us = new UsuarioBL();
             UsuarioBE usuario = us.Buscador(usu);
 
-            if (usuario != null )
+            if (usuario != null)
             {
                 MessageBox.Show("Usuario encontrado");
             }
@@ -33,6 +33,12 @@ namespace TP_net
             {
                 MessageBox.Show("No se encontro el usuario");
             }
+        }
+
+        private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRegistro frm = new frmRegistro();
+            frm.Show();
         }
     }
 }

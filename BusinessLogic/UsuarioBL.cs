@@ -12,9 +12,8 @@ namespace BusinessLogic
             conexion = new Conexion();
         }
 
-        public void Agregar(int dni, string nombre, string apellido, string email, byte[] foto, string password, string tipo, string estado)
+        public void Agregar(UsuarioBE usuNuevo)
         {
-            UsuarioBE usuNuevo = new UsuarioBE(dni, nombre, apellido, email, foto, password, tipo, estado);
             UsuarioData usuData = new UsuarioData();
             if (usuData.GuardarUsuario(usuNuevo) == "true")
             {

@@ -36,6 +36,7 @@
             txtContraseña = new TextBox();
             lnkOlvidaPass = new LinkLabel();
             btnIniciarSesion = new Button();
+            lnkCrearCuenta = new LinkLabel();
             SuspendLayout();
             // 
             // label1
@@ -105,7 +106,7 @@
             // 
             // btnIniciarSesion
             // 
-            btnIniciarSesion.Location = new Point(86, 246);
+            btnIniciarSesion.Location = new Point(88, 246);
             btnIniciarSesion.Name = "btnIniciarSesion";
             btnIniciarSesion.Size = new Size(110, 44);
             btnIniciarSesion.TabIndex = 7;
@@ -113,12 +114,24 @@
             btnIniciarSesion.UseVisualStyleBackColor = true;
             btnIniciarSesion.Click += btnIniciarSesion_Click;
             // 
+            // lnkCrearCuenta
+            // 
+            lnkCrearCuenta.AutoSize = true;
+            lnkCrearCuenta.Location = new Point(12, 305);
+            lnkCrearCuenta.Name = "lnkCrearCuenta";
+            lnkCrearCuenta.Size = new Size(96, 15);
+            lnkCrearCuenta.TabIndex = 8;
+            lnkCrearCuenta.TabStop = true;
+            lnkCrearCuenta.Text = "No tengo cuenta";
+            lnkCrearCuenta.LinkClicked += lnkCrearCuenta_LinkClicked;
+            // 
             // frmInicioSesion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(294, 329);
+            Controls.Add(lnkCrearCuenta);
             Controls.Add(btnIniciarSesion);
             Controls.Add(lnkOlvidaPass);
             Controls.Add(txtContraseña);
@@ -143,5 +156,6 @@
         private TextBox txtContraseña;
         private LinkLabel lnkOlvidaPass;
         private Button btnIniciarSesion;
+        private LinkLabel lnkCrearCuenta;
     }
 }
