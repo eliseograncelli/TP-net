@@ -22,5 +22,22 @@ namespace TP_net
         {
             UsuarioBE usuNuevo = new UsuarioBE(int.Parse(txtDNI.Text), txtNombre.Text, txtApellido.Text, txtEmail.Text, null, txtContraseña.Text, cbxTipo.Text, cbxEstado.Text);
         }
+
+        private void limpiaEntradas()
+        {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtDNI.Text = "";
+            txtEmail.Text = "";
+            txtContraseña.Text = "";
+            txtId.Text = "";
+            cbxEstado.Text = "";
+            cbxTipo.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiaEntradas();
+        }
     }
 }
