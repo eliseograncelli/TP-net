@@ -25,14 +25,21 @@ namespace TP_net
             UsuarioBL us = new UsuarioBL();
             UsuarioBE usuario = us.Buscador(usu);
 
-            if (usuario != null)
+            if (usuario.Tipo == "Cliente")
             {
                 MessageBox.Show("Usuario encontrado");
             }
-            else
+            else if (usuario.Tipo == "Vendedor")
             {
+                if (usuario.Estado == "Activo") { MessageBox.Show("User founded"); }
+                else MessageBox.Show("Su cuenta sera activada a la brevedad, por favor espere.");
+
+            } else if (usuario.Tipo == "Mayorista")
+            {
+                MessageBox.Show("User founded");
+            } 
+            else 
                 MessageBox.Show("No se encontro el usuario");
-            }
         }
 
         private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
