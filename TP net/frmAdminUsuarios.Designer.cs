@@ -82,7 +82,7 @@
             txtNombre.Margin = new Padding(2);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(191, 23);
-            txtNombre.TabIndex = 2;
+            txtNombre.TabIndex = 1;
             // 
             // txtEmail
             // 
@@ -98,7 +98,7 @@
             txtContraseña.Margin = new Padding(2);
             txtContraseña.Name = "txtContraseña";
             txtContraseña.Size = new Size(191, 23);
-            txtContraseña.TabIndex = 5;
+            txtContraseña.TabIndex = 7;
             // 
             // label3
             // 
@@ -126,7 +126,7 @@
             btnExaminar.Margin = new Padding(2);
             btnExaminar.Name = "btnExaminar";
             btnExaminar.Size = new Size(99, 26);
-            btnExaminar.TabIndex = 7;
+            btnExaminar.TabIndex = 8;
             btnExaminar.Text = "Examinar";
             btnExaminar.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +136,7 @@
             btnAgregar.Margin = new Padding(2);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(68, 26);
-            btnAgregar.TabIndex = 8;
+            btnAgregar.TabIndex = 10;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -147,7 +147,7 @@
             btnModificar.Margin = new Padding(2);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(67, 26);
-            btnModificar.TabIndex = 9;
+            btnModificar.TabIndex = 11;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             btnModificar.Click += btnModificar_Click;
@@ -158,9 +158,10 @@
             btnBorrar.Margin = new Padding(2);
             btnBorrar.Name = "btnBorrar";
             btnBorrar.Size = new Size(66, 26);
-            btnBorrar.TabIndex = 10;
+            btnBorrar.TabIndex = 12;
             btnBorrar.Text = "Borrar";
             btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // btnCancelar
             // 
@@ -168,7 +169,7 @@
             btnCancelar.Margin = new Padding(2);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(99, 26);
-            btnCancelar.TabIndex = 11;
+            btnCancelar.TabIndex = 9;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -208,7 +209,7 @@
             cbxTipo.Location = new Point(127, 143);
             cbxTipo.Name = "cbxTipo";
             cbxTipo.Size = new Size(191, 23);
-            cbxTipo.TabIndex = 15;
+            cbxTipo.TabIndex = 5;
             // 
             // label5
             // 
@@ -227,7 +228,7 @@
             cbxEstado.Location = new Point(333, 143);
             cbxEstado.Name = "cbxEstado";
             cbxEstado.Size = new Size(156, 23);
-            cbxEstado.TabIndex = 17;
+            cbxEstado.TabIndex = 6;
             // 
             // label6
             // 
@@ -254,7 +255,7 @@
             txtApellido.Location = new Point(333, 43);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(156, 23);
-            txtApellido.TabIndex = 20;
+            txtApellido.TabIndex = 2;
             // 
             // label8
             // 

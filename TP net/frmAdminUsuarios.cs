@@ -18,12 +18,25 @@ namespace TP_net
         {
             UsuarioBL us = new UsuarioBL();
             InitializeComponent();
-            dgvUsuarios.DataSource = us.Listar().Tables[0];
+            LlenaDgv();
+            txtId.Enabled = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            UsuarioBL usu = new UsuarioBL();
             UsuarioBE usuNuevo = new UsuarioBE(int.Parse(txtDNI.Text), txtNombre.Text, txtApellido.Text, txtEmail.Text, null, txtContraseña.Text, cbxTipo.Text, cbxEstado.Text);
+            if (usu.Buscador(usuNuevo) == null)
+            {
+                usu.Agregar(usuNuevo);
+                MessageBox.Show("Usuario: " + usuNuevo.Nombre.ToString() + " " + usuNuevo.Apellido.ToString() + " creado con éxito.");
+            }
+            else
+            {
+                MessageBox.Show("El mail ingresado ya posee una cuenta, del tipo " + usu.Buscador(usuNuevo).Tipo.ToString() + ". Si desea crear una cuenta de otro tipo ingrese otro email.");
+            }
+            limpiaEntradas();
+            LlenaDgv();
         }
 
         private void limpiaEntradas()
@@ -53,12 +66,21 @@ namespace TP_net
             txtId.Text = dgvUsuarios.Rows[indice].Cells[0].Value.ToString();
             txtDNI.Text = dgvUsuarios.Rows[indice].Cells[1].Value.ToString();
             cbxTipo.Text = dgvUsuarios.Rows[indice].Cells[7].Value.ToString();
-            cbxEstado.Text = dgvUsuarios.Rows[indice].Cells[8].Value.ToString(); 
+            cbxEstado.Text = dgvUsuarios.Rows[indice].Cells[8].Value.ToString();
 
             UsuarioBE usu = new UsuarioBE(int.Parse(txtDNI.Text), txtNombre.Text, txtApellido.Text, txtEmail.Text, null, txtContraseña.Text, cbxTipo.Text, cbxEstado.Text);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
+        {
+            UsuarioBE us = SeleccionaUsuario();
+            UsuarioBL usu = new UsuarioBL();
+            MessageBox.Show(usu.Modificar(us));
+            limpiaEntradas();
+            LlenaDgv();
+        }
+
+        private UsuarioBE SeleccionaUsuario()
         {
             int id = int.Parse(txtId.Text);
             string nombre = txtNombre.Text;
@@ -68,12 +90,39 @@ namespace TP_net
             int dni = int.Parse(txtDNI.Text);
             string tipo = cbxTipo.Text;
             string estado = cbxEstado.Text;
+            UsuarioBE usuario = new UsuarioBE(id, dni, nombre, apellido, email, null, contraseña, tipo, estado);
+            return usuario;
+        }
 
-            UsuarioBE usuModificado = new UsuarioBE(id, dni, nombre, apellido, email, null, contraseña, tipo, estado);
+        private void LlenaDgv()
+        {
             UsuarioBL usu = new UsuarioBL();
-            MessageBox.Show(usu.Modificar(usuModificado));
             dgvUsuarios.DataSource = usu.Listar().Tables[0];
+        }
 
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            UsuarioBL usu = new UsuarioBL();
+            UsuarioBE usuABorrar = SeleccionaUsuario();
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas eliminar el usuario " + usuABorrar.Nombre + " " + usuABorrar.Apellido +"? ", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                try
+                {
+                    usu.Eliminar(usuABorrar);
+                    MessageBox.Show("Usuario " + usuABorrar.Nombre + " " + usuABorrar.Apellido + " eliminado con éxito");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Operación cancelada.");
+            }
+            limpiaEntradas();
+            LlenaDgv();
         }
     }
 }

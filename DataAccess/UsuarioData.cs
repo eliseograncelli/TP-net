@@ -25,11 +25,10 @@ namespace DataAccess
                 "VALUES ('" + usuNuevo.DNI + "','" + usuNuevo.Nombre + "', '" + usuNuevo.Apellido + "', '" + usuNuevo.Email + "','" + usuNuevo.Password + "', '" + usuNuevo.Tipo + "', '" + usuNuevo.Estado + "' );");
         }
 
-        public int EliminarDeBD(int id)
+        public string EliminarDeBD(UsuarioBE us)
         {
-            conexion.Pruebaconectar(
-                "DELETE FROM Empleado WHERE id = '" + id + "'");
-            return 1;
+            return conexion.Pruebaconectar(
+                "DELETE FROM Usuario WHERE id = '" + us.Id + "'");
         } // OK
 
         public string Modificar(UsuarioBE usu)

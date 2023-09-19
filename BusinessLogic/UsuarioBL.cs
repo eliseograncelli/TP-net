@@ -25,18 +25,10 @@ namespace BusinessLogic
             }
         } // OK
 
-        public void Eliminar(int id)
+        public string Eliminar(UsuarioBE us)
         {
-            // ¿NECESARIO RECUPERAR EL OBJETO COMPLETO?
             UsuarioData usuarioData = new UsuarioData();
-            if (usuarioData.EliminarDeBD(id) == 1)
-            {
-                // MessageBox.Show("USUARIO ELIMINADO CON EXITO");
-            }
-            else
-            {
-                // MessageBox.Show("ERROR AL ELIMINAR USUARIO");
-            }
+            return usuarioData.EliminarDeBD(us);
         } // OK
 
         public string Modificar(UsuarioBE usu)
