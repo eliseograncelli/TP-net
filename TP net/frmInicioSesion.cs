@@ -28,18 +28,30 @@ namespace TP_net
             if (usuario.Tipo == "Cliente")
             {
                 MessageBox.Show("Usuario encontrado");
+                // Abrir form clientes
             }
             else if (usuario.Tipo == "Vendedor")
             {
-                if (usuario.Estado == "Activo") { MessageBox.Show("User founded"); }
+                if (usuario.Estado == "Activo") 
+                { 
+                    frmVendedor frm = new frmVendedor();
+                    frm.Show();
+                }
                 else MessageBox.Show("Su cuenta sera activada a la brevedad, por favor espere.");
 
             } else if (usuario.Tipo == "Mayorista")
             {
-                MessageBox.Show("User founded");
+                MessageBox.Show("Usuario encontrado");
             } 
-            else 
+            else if (usuario.Tipo == "Administrador")
+            {
+                frmAdminUsuarios frm = new frmAdminUsuarios();
+                frm.Show();
+            }
+            else
+            {
                 MessageBox.Show("No se encontro el usuario");
+            }
         }
 
         private void lnkCrearCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

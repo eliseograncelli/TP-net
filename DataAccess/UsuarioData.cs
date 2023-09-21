@@ -21,7 +21,7 @@ namespace DataAccess
         public string GuardarUsuario(UsuarioBE usuNuevo) // OK
         {
             return conexion.Pruebaconectar(
-                "INSERT INTO Usuario (dni,nombre,apellido,email,password,tipo,estado) " +
+                "INSERT INTO Usuarios (DNI,Nombre,Apellido,Email,Password,Tipo,Estado) " +
                 "VALUES ('" + usuNuevo.DNI + "','" + usuNuevo.Nombre + "', '" + usuNuevo.Apellido + "', '" + usuNuevo.Email + "','" + usuNuevo.Password + "', '" + usuNuevo.Tipo + "', '" + usuNuevo.Estado + "' );");
         }
 
@@ -48,7 +48,6 @@ namespace DataAccess
         public UsuarioBE BuscarUsu(UsuarioBE usu)
         {
             SqlDataReader r;
-            //  string cadena = "SELECT* FROM Usuario WHERE email = 'juan@gmail.co' AND password = 'eee'";
             string cadena = "SELECT * FROM Usuario WHERE email = '" + usu.Email + "' AND password = '" + usu.Password + "'";
             r = conexion.Ejecutador(cadena);
 
