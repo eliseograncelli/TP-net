@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20230920221234_Initial")]
+    [Migration("20230928211453_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -36,6 +36,9 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("IdVendedor")
+                        .HasColumnType("int");
+
                     b.Property<string>("Marca")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -52,6 +55,12 @@ namespace DataAccess.Migrations
 
                     b.Property<float>("PrecioX10")
                         .HasColumnType("real");
+
+                    b.Property<byte[]>("imagen")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<int>("stock")
+                        .HasColumnType("int");
 
                     b.HasKey("IdProd");
 

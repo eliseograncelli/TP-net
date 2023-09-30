@@ -18,10 +18,13 @@ namespace DataAccess.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Marca = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdVendedor = table.Column<int>(type: "int", nullable: false),
                     PrecioUnitario = table.Column<float>(type: "real", nullable: false),
                     PrecioX10 = table.Column<float>(type: "real", nullable: false),
-                    PrecioMayorista = table.Column<float>(type: "real", nullable: false)
+                    PrecioMayorista = table.Column<float>(type: "real", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    imagen = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    stock = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

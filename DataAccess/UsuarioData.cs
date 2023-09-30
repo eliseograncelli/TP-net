@@ -28,27 +28,27 @@ namespace DataAccess
         public string EliminarDeBD(UsuarioBE us)
         {
             return conexion.Pruebaconectar(
-                "DELETE FROM Usuario WHERE id = '" + us.Id + "'");
+                "DELETE FROM Usuarios WHERE id = '" + us.Id + "'");
         } // OK
 
         public string Modificar(UsuarioBE usu)
         {
            return conexion.Pruebaconectar(
-                "Update Usuario Set nombre='"
+                "Update Usuarios Set nombre='"
                 + usu.Nombre + "',dni='" + usu.DNI + "',email='" + usu.Email + "' ,apellido= '" + usu.Apellido + "',password='" + usu.Password + "', tipo= '" + usu.Tipo + "', estado= '" + usu.Estado + "' Where id =" + usu.Id);
            
         } // OK
 
         public DataSet MostrarUsuarios()
         {
-            SqlCommand sentencia = new SqlCommand("SELECT * FROM Usuario");
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM Usuarios");
             return conexion.EjecutarSentencia(sentencia);
         } // OK
 
         public UsuarioBE BuscarUsu(UsuarioBE usu)
         {
             SqlDataReader r;
-            string cadena = "SELECT * FROM Usuario WHERE email = '" + usu.Email + "' AND password = '" + usu.Password + "'";
+            string cadena = "SELECT * FROM Usuarios WHERE email = '" + usu.Email + "' AND password = '" + usu.Password + "'";
             r = conexion.Ejecutador(cadena);
 
             if (r.Read())
