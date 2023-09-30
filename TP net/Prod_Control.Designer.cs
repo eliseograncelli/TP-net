@@ -31,7 +31,7 @@
             pbxProd = new PictureBox();
             txtPrecio = new TextBox();
             btnAgregar = new Button();
-            txtNombreProd = new TextBox();
+            txtNombreProd = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxProd).BeginInit();
             SuspendLayout();
             // 
@@ -65,10 +65,14 @@
             // txtNombreProd
             // 
             txtNombreProd.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtNombreProd.Location = new Point(3, 116);
+            txtNombreProd.AutoSize = true;
+            txtNombreProd.Location = new Point(46, 113);
             txtNombreProd.Name = "txtNombreProd";
-            txtNombreProd.Size = new Size(130, 23);
-            txtNombreProd.TabIndex = 5;
+            txtNombreProd.Size = new Size(38, 15);
+            txtNombreProd.TabIndex = 6;
+            txtNombreProd.Text = "label1";
+            txtNombreProd.TextAlign = ContentAlignment.MiddleCenter;
+            txtNombreProd.Click += txtNombreProd_Click;
             // 
             // Prod_Control
             // 
@@ -90,6 +94,6 @@
         public PictureBox pbxProd;
         public TextBox txtPrecio;
         public Button btnAgregar;
-        public TextBox txtNombreProd;
+        public Label txtNombreProd;
     }
 }

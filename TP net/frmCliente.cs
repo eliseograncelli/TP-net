@@ -44,7 +44,7 @@ namespace TP_net
                 // Agregar el control al FlowLayoutPanel
                 flowLayoutPanel1.Controls.Add(productoControl);
             }
-        } 
+        }
 
     }
 }
