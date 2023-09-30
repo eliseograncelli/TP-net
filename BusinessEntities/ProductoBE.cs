@@ -21,7 +21,7 @@ namespace BusinessEntities
 
 
 
-        ProductoBE(string Nombre, string Marca, string Descripcion, float PrecioUnitario, float PrecioX10, float PrecioMayorista)
+        public ProductoBE(string Nombre, string Marca, string Descripcion, float PrecioUnitario, float PrecioX10, float PrecioMayorista)
         {
             this.Nombre = Nombre;
             this.Marca = Marca;
@@ -29,7 +29,9 @@ namespace BusinessEntities
             this.PrecioUnitario = PrecioUnitario;
             this.PrecioX10 = PrecioX10;
             this.PrecioMayorista = PrecioMayorista;
-        } 
+        }
 
     }
+
+
 }
