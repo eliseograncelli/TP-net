@@ -150,6 +150,7 @@ namespace TP_net
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(253, 31);
             txtDni.TabIndex = 2;
+            txtDni.KeyPress += txtDni_KeyPress;
             // 
             // txtNombre
             // 
@@ -158,6 +159,7 @@ namespace TP_net
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(253, 31);
             txtNombre.TabIndex = 3;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // txtApellido
             // 
@@ -166,6 +168,7 @@ namespace TP_net
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(253, 31);
             txtApellido.TabIndex = 4;
+            txtApellido.KeyPress += txtApellido_KeyPress;
             // 
             // txtEmail
             // 
@@ -174,6 +177,7 @@ namespace TP_net
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(253, 31);
             txtEmail.TabIndex = 5;
+            txtEmail.Validating += txtEmail_Validating;
             // 
             // txtContraseña
             // 
@@ -227,6 +231,7 @@ namespace TP_net
             btnExaminar.TabIndex = 7;
             btnExaminar.Text = "Examinar";
             btnExaminar.UseVisualStyleBackColor = true;
+            btnExaminar.Click += btnExaminar_Click;
             // 
             // label6
             // 

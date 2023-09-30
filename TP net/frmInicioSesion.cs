@@ -34,7 +34,7 @@ namespace TP_net
             {
                 if (usuario.Estado == "Activo") 
                 { 
-                    frmVendedor frm = new frmVendedor();
+                    frmVendedor frm = new frmVendedor(usuario);
                     frm.Show();
                 }
                 else MessageBox.Show("Su cuenta sera activada a la brevedad, por favor espere.");

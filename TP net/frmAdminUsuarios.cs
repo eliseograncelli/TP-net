@@ -62,7 +62,7 @@ namespace TP_net
             txtNombre.Text = dgvUsuarios.Rows[indice].Cells[2].Value.ToString();
             txtApellido.Text = dgvUsuarios.Rows[indice].Cells[3].Value.ToString();
             txtEmail.Text = dgvUsuarios.Rows[indice].Cells[4].Value.ToString();
-            txtContraseña.Text = dgvUsuarios.Rows[indice].Cells[6].Value.ToString();
+            txtContraseña.Text = dgvUsuarios.Rows[indice].Cells[5].Value.ToString();
             txtId.Text = dgvUsuarios.Rows[indice].Cells[0].Value.ToString();
             txtDNI.Text = dgvUsuarios.Rows[indice].Cells[1].Value.ToString();
             cbxTipo.Text = dgvUsuarios.Rows[indice].Cells[7].Value.ToString();
