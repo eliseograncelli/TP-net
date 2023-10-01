@@ -22,16 +22,12 @@ namespace TP_net
 
         private void AgregarControles()
         {
-            ProductoBE p1 = new ProductoBE("Gin", "Gordons", "Floral", 20, 15, 10);
-            ProductoBE p2 = new ProductoBE("Vino", "Rutini", "Notas a uva", 30, 15, 10);
-            ProductoBE p3 = new ProductoBE("Vino", "Viña", "Para tomar con manacho", 5, 4, 2);
-            ProductoBE p4 = new ProductoBE("Gin", "BullDog", "Tomalo con scheepes", 22, 21, 19);
-            ProductoBE p5 = new ProductoBE("Vino", "Toro", "De Argentina al mundo", 6, 5, 2);
-            ProductoBE p6 = new ProductoBE("Vino", "Colon", "Notas a roble", 11, 11, 10);
+            ProductoBE p1 = new ProductoBE("Gin", "Gordons", "hola perro", 1, 20, 15, 10,  null, 80 );
+            ProductoBE p2 = new ProductoBE("Vino", "Rutini", "dogooo", 2, 20, 30, 22,  null , 10);
 
             List<ProductoBE> listado = new List<ProductoBE>
             {
-             p1, p2, p3, p4, p5, p6
+             p1, p2
             };
 
             foreach (ProductoBE producto in listado)

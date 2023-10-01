@@ -1,9 +1,6 @@
 ﻿using BusinessEntities;
-<<<<<<< HEAD
-=======
 using DataAccess;
 using Microsoft.EntityFrameworkCore;
->>>>>>> e71980d82a7f8a63a0abfdc44239699255324571
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-<<<<<<< HEAD
-    internal class ProductoBL
-    {
+   // internal class ProductoBL
+   // {
 
 
 
@@ -22,7 +18,6 @@ namespace BusinessLogic
         //{
         //    foreach (ProductoBE p in ListaProductos)
         //}
-=======
     public class ProductoBL
     {
         public string Agregar(ProductoBE proNuevo)
@@ -49,6 +44,5 @@ namespace BusinessLogic
             ProductoData proD = new ProductoData();
             return proD.listar(id);
         }
->>>>>>> e71980d82a7f8a63a0abfdc44239699255324571
     }
 }

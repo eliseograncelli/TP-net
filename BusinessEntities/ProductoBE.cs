@@ -28,11 +28,7 @@ namespace BusinessEntities
 
 
 
-<<<<<<< HEAD
-        public ProductoBE(string Nombre, string Marca, string Descripcion, float PrecioUnitario, float PrecioX10, float PrecioMayorista)
-=======
         public ProductoBE(string Nombre, string Marca, string Descripcion, float PrecioUnitario, float PrecioX10, float PrecioMayorista, int IdVendedor, byte[] imagen, int stock)
->>>>>>> e71980d82a7f8a63a0abfdc44239699255324571
         {
             this.Nombre = Nombre;
             this.Marca = Marca;
@@ -40,12 +36,9 @@ namespace BusinessEntities
             this.PrecioUnitario = PrecioUnitario;
             this.PrecioX10 = PrecioX10;
             this.PrecioMayorista = PrecioMayorista;
-<<<<<<< HEAD
-=======
             this.IdVendedor = IdVendedor;
             this.imagen = imagen;
             this.stock = stock;
->>>>>>> e71980d82a7f8a63a0abfdc44239699255324571
         }
 
     }
