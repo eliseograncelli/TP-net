@@ -44,5 +44,17 @@ namespace BusinessLogic
             ProductoData proD = new ProductoData();
             return proD.listar(id);
         }
+
+        public List<ProductoBE> ObtenerProductos()
+        {
+            ProductoData proD = new ProductoData();
+            return proD.ListarProductos();
+        }
+
+        public ProductoBE MostrarProducto(ProductoBE p)
+        {
+            ProductoData prod = new ProductoData();
+            return prod.BuscarProd(p);
+        }
     }
 }

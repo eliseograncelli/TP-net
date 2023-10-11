@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessEntities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,7 @@ namespace TP_net
         private void txtNombreProd_Click(object sender, EventArgs e)
         {
             frmDetalleProducto frm = new frmDetalleProducto();
+          //  frm.MuestraProd(e);
             frm.Show();
         }
     }

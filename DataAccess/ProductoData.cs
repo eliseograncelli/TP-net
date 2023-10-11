@@ -71,7 +71,22 @@ namespace DataAccess
             {
                return dbContext.Producto.Where(p => p.IdVendedor==id).ToList(); 
             }
+        }
 
+        public List<ProductoBE> ListarProductos()
+        {
+            using ( var dbContext = new AppDBContext())
+            {
+                return dbContext.Producto.ToList();
+            }
+        }
+
+        public ProductoBE BuscarProd(ProductoBE prod)
+        {
+            using( var dbContext = new AppDBContext())
+            {
+                return dbContext.Producto.Where(p => p.IdProd == prod.IdProd).ToList().FirstOrDefault();
+            }
         }
     }
 }
