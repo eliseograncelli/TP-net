@@ -41,6 +41,21 @@ namespace BusinessEntities
             this.stock = stock;
         }
 
+        public ProductoBE(int id, string nombre, string marca, string descripcion, float precioUnitario, float precioX10, float precioMayorista, int idVendedor, byte[] imgn, int stck)
+        {
+            this.IdProd = id;
+            this.Nombre = nombre;
+            this.Marca = marca;
+            this.Descripcion = descripcion;
+            this.PrecioUnitario = precioUnitario;
+            this.PrecioX10 = precioX10;
+            this.PrecioMayorista = precioMayorista;
+            this.IdVendedor = idVendedor;
+            this.imagen = imgn;
+            this.stock = stck;
+        }
+
+
     }
 
 

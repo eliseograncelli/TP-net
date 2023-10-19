@@ -23,11 +23,21 @@ namespace TP_net
 
         }
 
-        private void txtNombreProd_Click(object sender, EventArgs e)
+        private void btnAgregar_MouseClick(object sender, MouseEventArgs e)
         {
-            frmDetalleProducto frm = new frmDetalleProducto();
-          //  frm.MuestraProd(e);
-            frm.Show();
+            int nro = int.Parse(txtCantidad.Text);
+            nro++;
+            txtCantidad.Text = nro.ToString();
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            int nro = int.Parse(txtCantidad.Text);
+            if (nro > 0)
+            {
+                nro--;
+            }
+            txtCantidad.Text = nro.ToString();
         }
     }
 }

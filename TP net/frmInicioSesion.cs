@@ -27,8 +27,8 @@ namespace TP_net
 
             if (usuario.Tipo == "Cliente")
             {
-                MessageBox.Show("Usuario encontrado");
-                // Abrir form clientes
+                frmCliente frm = new frmCliente(usuario);
+                frm.Show();
             }
             else if (usuario.Tipo == "Vendedor")
             {

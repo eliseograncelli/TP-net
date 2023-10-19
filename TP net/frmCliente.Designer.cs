@@ -1,4 +1,6 @@
-﻿namespace TP_net
+﻿using BusinessEntities;
+
+namespace TP_net
 {
     partial class frmCliente
     {
@@ -30,10 +32,11 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
+            lblCarrito = new Label();
             label4 = new Label();
             label5 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            txtUsuario = new Label();
             SuspendLayout();
             // 
             // label1
@@ -60,17 +63,18 @@
             label2.TabIndex = 2;
             label2.Text = "Productos";
             // 
-            // label3
+            // lblCarrito
             // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.WindowText;
-            label3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(731, 27);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Carrito";
+            lblCarrito.AutoSize = true;
+            lblCarrito.BackColor = SystemColors.WindowText;
+            lblCarrito.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCarrito.ForeColor = SystemColors.ControlLightLight;
+            lblCarrito.Location = new Point(731, 27);
+            lblCarrito.Name = "lblCarrito";
+            lblCarrito.Size = new Size(43, 15);
+            lblCarrito.TabIndex = 3;
+            lblCarrito.Text = "Carrito";
+            lblCarrito.MouseClick += lblCarrito_MouseClick;
             // 
             // label4
             // 
@@ -105,16 +109,26 @@
             flowLayoutPanel1.Size = new Size(782, 370);
             flowLayoutPanel1.TabIndex = 0;
             // 
+            // txtUsuario
+            // 
+            txtUsuario.AutoSize = true;
+            txtUsuario.Location = new Point(12, 19);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(41, 15);
+            txtUsuario.TabIndex = 6;
+            txtUsuario.Text = "label3";
+            // 
             // frmCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(806, 446);
+            Controls.Add(txtUsuario);
             Controls.Add(label1);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(lblCarrito);
             Controls.Add(label2);
             Controls.Add(flowLayoutPanel1);
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -129,9 +143,10 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
+        private Label lblCarrito;
         private Label label4;
         private Label label5;
         private FlowLayoutPanel flowLayoutPanel1;
+        public Label txtUsuario;
     }
 }

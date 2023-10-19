@@ -67,10 +67,9 @@ namespace TP_net
             // 
             // pbxFoto
             // 
-            pbxFoto.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pbxFoto.Location = new Point(12, 12);
             pbxFoto.Name = "pbxFoto";
-            pbxFoto.Size = new Size(186, 209);
+            pbxFoto.Size = new Size(186, 208);
             pbxFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbxFoto.TabIndex = 2;
             pbxFoto.TabStop = false;
@@ -80,7 +79,7 @@ namespace TP_net
             txtDescripcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             txtDescripcion.Location = new Point(12, 269);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(436, 281);
+            txtDescripcion.Size = new Size(436, 118);
             txtDescripcion.TabIndex = 3;
             txtDescripcion.Text = "Descripcion producto";
             // 
@@ -157,7 +156,7 @@ namespace TP_net
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(460, 559);
+            ClientSize = new Size(460, 399);
             Controls.Add(txtStock);
             Controls.Add(txtPrecioX10);
             Controls.Add(txtPrecioUnitario);
@@ -171,6 +170,7 @@ namespace TP_net
             Controls.Add(txtNombreProd);
             ForeColor = SystemColors.ControlLightLight;
             Name = "frmDetalleProducto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "DetalleProducto";
             ((System.ComponentModel.ISupportInitialize)pbxFoto).EndInit();
             ResumeLayout(false);
@@ -194,14 +194,21 @@ namespace TP_net
 
         public void MuestraProd(ProductoBE p)
         {
-            ProductoBL prod = new ProductoBL();
-            ProductoBE productoABuscar = prod.MostrarProducto(p);
-            txtNombreProd.Text = productoABuscar.Nombre;
-            txtMarca.Text = productoABuscar.Marca;
-            txtPrecioUnitario.Text = productoABuscar.PrecioUnitario.ToString();
-            txtPrecioX10.Text = productoABuscar.PrecioX10.ToString();
-            txtStock.Text = productoABuscar.stock.ToString();
-            txtDescripcion.Text = productoABuscar.Descripcion;
+            //ProductoBL prod = new ProductoBL();
+            //ProductoBE productoABuscar = prod.MostrarProducto(p);
+            //txtNombreProd.Text = productoABuscar.Nombre;
+            txtNombreProd.Text = p.Nombre;
+            txtMarca.Text = p.Marca;
+            txtPrecioUnitario.Text = p.PrecioUnitario.ToString();
+            txtPrecioX10.Text = p.PrecioX10.ToString();
+            txtStock.Text = p.stock.ToString();
+            txtDescripcion.Text = p.Descripcion;
+            if (p.imagen != null)
+            {
+                MemoryStream ms = new MemoryStream(p.imagen);
+                pbxFoto.Image = Image.FromStream(ms);
+            }
+            Show();
         }
     }
 }
