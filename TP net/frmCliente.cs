@@ -16,19 +16,20 @@ namespace TP_net
     public partial class frmCliente : Form
     {
         internal UsuarioBE uss;
+        private Venta v;
 
         public frmCliente(UsuarioBE us)
         {
             InitializeComponent();
-            AgregarControles();
-            uss = us;
-            txtUsuario.Text = uss.Nombre.ToString() + " " + uss.Apellido.ToString();
+            txtUsuario.Text = us.Nombre.ToString() + " " + us.Apellido.ToString();
+            v = new Venta(us);
+            AgregarControles(v);
 
         }
 
         List<ProductoBE> listado = new List<ProductoBE>();
 
-        private void AgregarControles()
+        private void AgregarControles(Venta v)
         {
             ProductoBL productoBL = new ProductoBL();
             // List<ProductoBE> listado = new List<ProductoBE>();
@@ -36,10 +37,9 @@ namespace TP_net
 
             foreach (ProductoBE producto in listado) // OK
             {
-                Prod_Control productoControl = new Prod_Control();
+                Prod_Control productoControl = new Prod_Control(v);
                 productoControl.txtNombreProd.Text = producto.Nombre.ToString();
                 productoControl.txtPrecio.Text = "$" + producto.PrecioUnitario.ToString();
-                productoControl.txtPrecioX10.Text = "$" + producto.PrecioX10.ToString();
                 productoControl.txtId.Text = producto.IdProd.ToString();
                 byte[] fotoProd = producto.imagen;
                 if (fotoProd != null)
@@ -80,7 +80,7 @@ namespace TP_net
         private void lblCarrito_MouseClick(object sender, MouseEventArgs e)
         {
             //frmCarrito frm = new frmCarrito();
-            List<LineaVenta> lineas = new List<LineaVenta>();
+            /*List<LineaVenta> lineas = new List<LineaVenta>();
             
 
             foreach (Prod_Control pc in flowLayoutPanel1.Controls)
@@ -92,12 +92,11 @@ namespace TP_net
                     ProductoBE p = new ProductoBE(productoSeleccionado.IdProd, productoSeleccionado.Nombre, productoSeleccionado.Marca, productoSeleccionado.Descripcion, productoSeleccionado.PrecioUnitario, productoSeleccionado.PrecioX10, productoSeleccionado.PrecioMayorista, productoSeleccionado.IdVendedor, productoSeleccionado.imagen, productoSeleccionado.stock);
                     LineaVenta lv = new LineaVenta(p, int.Parse(pc.txtCantidad.Text));
                     lineas.Add(lv);
-
                 }
-            }
-
-           Venta v = new Venta(uss, lineas);
-            frmCarrito frm = new frmCarrito(v, uss);
+            } */
+            
+            //Venta v = new Venta(uss);
+            frmCarrito frm = new frmCarrito(v);
             frm.Show();
 
         }

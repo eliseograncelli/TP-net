@@ -72,5 +72,34 @@ namespace DataAccess
                 return null;
             }
         }  // OK
+
+        public UsuarioBE BuscarUsuPorId(UsuarioBE usu)
+        {
+            SqlDataReader r;
+            string cadena = "SELECT * FROM Usuarios WHERE Id = '" + usu.Id + "'";
+            r = conexion.Ejecutador(cadena);
+
+            if (r.Read())
+            {
+                UsuarioBE usuarioEncontrado = new UsuarioBE();
+                usuarioEncontrado.Email = r["Email"].ToString();
+                usuarioEncontrado.Password = r["Password"].ToString();
+                usuarioEncontrado.Nombre = r["nombre"].ToString();
+                usuarioEncontrado.Apellido = r["apellido"].ToString();
+                usuarioEncontrado.Estado = r["estado"].ToString();
+                usuarioEncontrado.Tipo = r["tipo"].ToString();
+                usuarioEncontrado.DNI = (int)r["dni"];
+                usuarioEncontrado.Id = (int)r["id"];
+                return usuarioEncontrado;
+
+            }
+            else
+            {
+                // Usuario no encontrado
+
+                return null;
+            }
+
+        }
     }
 }

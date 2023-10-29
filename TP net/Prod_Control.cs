@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,12 @@ namespace TP_net
 {
     public partial class Prod_Control : UserControl
     {
-        public Prod_Control()
+        private Venta v;
+        public Prod_Control(Venta venta)
         {
             InitializeComponent();
+            v = venta;
+            
         }
 
         private void Prod_Control_Load(object sender, EventArgs e)
@@ -39,5 +43,16 @@ namespace TP_net
             }
             txtCantidad.Text = nro.ToString();
         }
+
+
+         private void btnAgregar_Click(object sender, EventArgs e)
+            {
+                if (int.TryParse(txtCantidad.Text, out int cantidad) && cantidad > 0)
+                {
+                ProductoBE p = new ProductoBE(int.Parse(txtId.Text));
+                v.AgregarProductos(p, cantidad); 
+                }
+            }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace TP_net
+﻿using BusinessEntities;
+
+namespace TP_net
 {
     partial class Prod_Control
     {
@@ -30,13 +32,12 @@
         {
             pbxProd = new PictureBox();
             txtCantidad = new TextBox();
-            btnAgregar = new Button();
+            btnMas = new Button();
             txtNombreProd = new Label();
-            label1 = new Label();
-            txtPrecioX10 = new Label();
             txtId = new Label();
             txtPrecio = new Label();
-            button1 = new Button();
+            btnMenos = new Button();
+            btnAgregar = new Button();
             ((System.ComponentModel.ISupportInitialize)pbxProd).BeginInit();
             SuspendLayout();
             // 
@@ -61,19 +62,19 @@
             txtCantidad.Text = "0";
             txtCantidad.TextAlign = HorizontalAlignment.Center;
             // 
-            // btnAgregar
+            // btnMas
             // 
-            btnAgregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnAgregar.BackColor = Color.Lime;
-            btnAgregar.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAgregar.ForeColor = SystemColors.WindowText;
-            btnAgregar.Location = new Point(103, 153);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(34, 29);
-            btnAgregar.TabIndex = 4;
-            btnAgregar.Text = "+";
-            btnAgregar.UseVisualStyleBackColor = false;
-            btnAgregar.MouseClick += btnAgregar_MouseClick;
+            btnMas.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnMas.BackColor = Color.Lime;
+            btnMas.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMas.ForeColor = SystemColors.WindowText;
+            btnMas.Location = new Point(103, 153);
+            btnMas.Name = "btnMas";
+            btnMas.Size = new Size(29, 29);
+            btnMas.TabIndex = 4;
+            btnMas.Text = "+";
+            btnMas.UseVisualStyleBackColor = false;
+            btnMas.MouseClick += btnAgregar_MouseClick;
             // 
             // txtNombreProd
             // 
@@ -84,24 +85,6 @@
             txtNombreProd.TabIndex = 6;
             txtNombreProd.Text = "nombre";
             txtNombreProd.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(0, 182);
-            label1.Name = "label1";
-            label1.Size = new Size(130, 30);
-            label1.TabIndex = 7;
-            label1.Text = "Precio comprando mas\r\nde 10 unidades: \r\n";
-            // 
-            // txtPrecioX10
-            // 
-            txtPrecioX10.Anchor = AnchorStyles.Left;
-            txtPrecioX10.Location = new Point(91, 197);
-            txtPrecioX10.Name = "txtPrecioX10";
-            txtPrecioX10.Size = new Size(62, 19);
-            txtPrecioX10.TabIndex = 8;
-            txtPrecioX10.Text = "precioX10";
             // 
             // txtId
             // 
@@ -123,31 +106,42 @@
             txtPrecio.TabIndex = 10;
             txtPrecio.Text = "label2";
             // 
-            // button1
+            // btnMenos
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.BackColor = Color.Red;
-            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.WindowText;
-            button1.Location = new Point(6, 152);
-            button1.Name = "button1";
-            button1.Size = new Size(34, 29);
-            button1.TabIndex = 11;
-            button1.Text = "-";
-            button1.UseVisualStyleBackColor = false;
-            button1.MouseClick += button1_MouseClick;
+            btnMenos.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnMenos.BackColor = Color.Red;
+            btnMenos.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMenos.ForeColor = SystemColors.WindowText;
+            btnMenos.Location = new Point(11, 152);
+            btnMenos.Name = "btnMenos";
+            btnMenos.Size = new Size(29, 29);
+            btnMenos.TabIndex = 11;
+            btnMenos.Text = "-";
+            btnMenos.UseVisualStyleBackColor = false;
+            btnMenos.MouseClick += button1_MouseClick;
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.BackColor = SystemColors.Control;
+            btnAgregar.ForeColor = SystemColors.WindowText;
+            btnAgregar.Location = new Point(36, 184);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(75, 29);
+            btnAgregar.TabIndex = 12;
+            btnAgregar.Text = "AGREGAR";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // Prod_Control
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
-            Controls.Add(button1);
-            Controls.Add(txtPrecio);
-            Controls.Add(txtPrecioX10);
-            Controls.Add(label1);
-            Controls.Add(txtNombreProd);
             Controls.Add(btnAgregar);
+            Controls.Add(btnMenos);
+            Controls.Add(txtPrecio);
+            Controls.Add(txtNombreProd);
+            Controls.Add(btnMas);
             Controls.Add(txtCantidad);
             Controls.Add(pbxProd);
             Controls.Add(txtId);
@@ -162,12 +156,11 @@
 
         public PictureBox pbxProd;
         public TextBox txtCantidad;
-        public Button btnAgregar;
+        public Button btnMas;
         public Label txtNombreProd;
-        private Label label1;
-        public Label txtPrecioX10;
         public Label txtId;
         public Label txtPrecio;
-        public Button button1;
+        public Button btnMenos;
+        private Button btnAgregar;
     }
 }

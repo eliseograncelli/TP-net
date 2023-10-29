@@ -75,5 +75,10 @@ namespace BusinessEntities
             this.Email = email;
             this.Password = password;
         }
+
+        public UsuarioBE(int id)
+        {
+            Id= id;
+        }
     }
 }

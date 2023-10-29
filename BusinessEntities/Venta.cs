@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,31 +9,40 @@ namespace BusinessEntities
 {
     public class Venta
     {
-        int Id { get; set; }
-        int IdCliente { get; set; }
-        DateTime fecha { get; set; }
-        float Monto { get; set; }
+        public int Id { get; set; }
+        [ForeignKey("UsuarioBE")]
+        public int IdCliente { get; set; }
+        public DateTime fecha { get; set; }
+        public float Monto { get; set; }
         public List<LineaVenta> Lineas { get; set; }
-        string Estado { get; set; }
+        public string Estado { get; set; }
 
-        public Venta(UsuarioBE us, List<LineaVenta> misLineas)
+
+        public Venta(UsuarioBE us)
         {
-            fecha = DateTime.Now;
             IdCliente = us.Id;
-            Lineas = misLineas;
+            fecha = DateTime.Now;
             Estado = "Pendiente";
-
+            Lineas = new List<LineaVenta> { };
         }
 
         public List<LineaVenta> MostrarLineas()
         {
-            return Lineas.ToList();
+            //return Lineas.ToList();
+            return Lineas;
         }
 
-       /* public void AgregarProductos(ProductoBE p, int cantidad)
+        public void AgregarLinea(LineaVenta lv)
+        {
+            Lineas.Add(lv);
+        }
+
+        public void AgregarProductos(ProductoBE p, int cantidad)
         {
             LineaVenta lv = new LineaVenta(p, cantidad);
             Lineas.Add(lv);
-        } */
+        } 
+
+
     }
 }

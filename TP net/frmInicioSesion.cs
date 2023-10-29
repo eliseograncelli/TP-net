@@ -32,17 +32,18 @@ namespace TP_net
             }
             else if (usuario.Tipo == "Vendedor")
             {
-                if (usuario.Estado == "Activo") 
-                { 
+                if (usuario.Estado == "Activo")
+                {
                     frmVendedor frm = new frmVendedor(usuario);
                     frm.Show();
                 }
                 else MessageBox.Show("Su cuenta sera activada a la brevedad, por favor espere.");
 
-            } else if (usuario.Tipo == "Mayorista")
+            }
+            else if (usuario.Tipo == "Mayorista")
             {
                 MessageBox.Show("Usuario encontrado");
-            } 
+            }
             else if (usuario.Tipo == "Administrador")
             {
                 frmAdminUsuarios frm = new frmAdminUsuarios();

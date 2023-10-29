@@ -55,6 +55,12 @@ namespace BusinessLogic
             return usu.BuscarUsu(usuario);
         }
 
+        public UsuarioBE BuscadorPorID(UsuarioBE us)
+        {
+            UsuarioData usu = new UsuarioData();
+            return usu.BuscarUsuPorId(us);
+        }
+
 
     }
 }

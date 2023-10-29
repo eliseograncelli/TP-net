@@ -1,4 +1,5 @@
 ﻿using BusinessEntities;
+using BusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace TP_net
 {
     public partial class frmCarrito : Form
     {
-        public frmCarrito(Venta v, UsuarioBE us)
+        public frmCarrito(Venta v)
         {
             InitializeComponent();
+            UsuarioBE us = new UsuarioBE(v.IdCliente);
+            UsuarioBL user = new UsuarioBL();
+            us = user.BuscadorPorID(us);
 
             txtNombre.Text = us.Nombre + " " + us.Apellido;
             dgvCarrito.DataSource = v.MostrarLineas();

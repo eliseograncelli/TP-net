@@ -55,6 +55,10 @@ namespace BusinessEntities
             this.stock = stck;
         }
 
+        public ProductoBE(int id)
+        {
+            this.IdProd = id;
+        }
 
     }
 
