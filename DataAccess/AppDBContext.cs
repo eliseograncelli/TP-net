@@ -18,7 +18,19 @@ namespace DataAccess
             //optionsBuilder.UseSqlServer($"Data Source=PC-Fili; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true");
             base.OnConfiguring(optionsBuilder);
         }
+
+
         public DbSet<ProductoBE> Producto { get;set; }    
         public DbSet<UsuarioBE> Usuarios { get;set; }
+        public DbSet<Venta> Ventas { get;set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Venta>()
+                  .HasMany(v => v.Lineas) // Una Venta tiene muchas Lineas
+                  .WithOne() // Cada Linea pertenece a una sola Venta
+                  .HasForeignKey(lv => lv.VentaId); // Clave foránea en LineaVenta
+            
+        }
+
     }
 }

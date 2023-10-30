@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace BusinessEntities
 {
     public class Venta
     {
+        [Key]
         public int Id { get; set; }
         [ForeignKey("UsuarioBE")]
         public int IdCliente { get; set; }
@@ -16,7 +18,10 @@ namespace BusinessEntities
         public float Monto { get; set; }
         public List<LineaVenta> Lineas { get; set; }
         public string Estado { get; set; }
+        [ForeignKey("IdCliente")]
+        public UsuarioBE Cliente { get; set; }
 
+        public Venta() { }
 
         public Venta(UsuarioBE us)
         {
@@ -39,8 +44,20 @@ namespace BusinessEntities
 
         public void AgregarProductos(ProductoBE p, int cantidad)
         {
-            LineaVenta lv = new LineaVenta(p, cantidad);
-            Lineas.Add(lv);
+            bool band = false;
+            foreach(LineaVenta misLineas in Lineas)
+            {
+                if(misLineas.IdProd == p.IdProd)
+                {
+                    misLineas.Cantidad = cantidad;
+                    band = true;
+                }
+            }
+            if(band==false)
+            {
+                LineaVenta lv = new LineaVenta(p, cantidad);
+                Lineas.Add(lv);
+            }
         } 
 
 

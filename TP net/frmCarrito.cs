@@ -14,9 +14,11 @@ namespace TP_net
 {
     public partial class frmCarrito : Form
     {
-        public frmCarrito(Venta v)
+        private Venta v;
+        public frmCarrito(Venta venta)
         {
             InitializeComponent();
+            v= venta;
             UsuarioBE us = new UsuarioBE(v.IdCliente);
             UsuarioBL user = new UsuarioBL();
             us = user.BuscadorPorID(us);
@@ -24,9 +26,12 @@ namespace TP_net
             txtNombre.Text = us.Nombre + " " + us.Apellido;
             dgvCarrito.DataSource = v.MostrarLineas();
 
-
-            // v.Lineas.ToList();
         }
 
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            /*VentaBL ventaBL = new VentaBL();
+            ventaBL.AgregarVenta(v); */
+        } 
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             dgvCarrito = new DataGridView();
-            button1 = new Button();
+            btnConfirmar = new Button();
             label1 = new Label();
             txtNombre = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
@@ -40,23 +40,23 @@
             dgvCarrito.BackgroundColor = SystemColors.MenuText;
             dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCarrito.GridColor = SystemColors.WindowText;
-            dgvCarrito.ForeColor = SystemColors.WindowText; // AGREGUE ESTA
             dgvCarrito.Location = new Point(12, 42);
             dgvCarrito.Name = "dgvCarrito";
             dgvCarrito.RowTemplate.Height = 25;
             dgvCarrito.Size = new Size(609, 305);
             dgvCarrito.TabIndex = 0;
             // 
-            // button1
+            // btnConfirmar
             // 
-            button1.BackColor = Color.Lime;
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(505, 334);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 48);
-            button1.TabIndex = 1;
-            button1.Text = "Confirmar compra";
-            button1.UseVisualStyleBackColor = false;
+            btnConfirmar.BackColor = Color.Lime;
+            btnConfirmar.ForeColor = SystemColors.ControlLightLight;
+            btnConfirmar.Location = new Point(505, 334);
+            btnConfirmar.Name = "btnConfirmar";
+            btnConfirmar.Size = new Size(105, 48);
+            btnConfirmar.TabIndex = 1;
+            btnConfirmar.Text = "Confirmar compra";
+            btnConfirmar.UseVisualStyleBackColor = false;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // label1
             // 
@@ -84,7 +84,7 @@
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(633, 394);
             Controls.Add(txtNombre);
-            Controls.Add(button1);
+            Controls.Add(btnConfirmar);
             Controls.Add(label1);
             Controls.Add(dgvCarrito);
             ForeColor = SystemColors.Window;
@@ -98,7 +98,7 @@
         #endregion
 
         public DataGridView dgvCarrito;
-        private Button button1;
+        private Button btnConfirmar;
         private Label label1;
         public Label txtNombre;
     }
