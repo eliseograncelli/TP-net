@@ -26,10 +26,9 @@ namespace DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Venta>()
-                  .HasMany(v => v.Lineas) // Una Venta tiene muchas Lineas
-                  .WithOne() // Cada Linea pertenece a una sola Venta
-                  .HasForeignKey(lv => lv.VentaId); // Clave foránea en LineaVenta
-            
+                  .HasMany(v => v.Lineas) 
+                  .WithOne() 
+                  .HasForeignKey(lv => lv.VentaId); 
         }
 
     }

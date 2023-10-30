@@ -34,13 +34,13 @@ namespace BusinessEntities
         public List<LineaVenta> MostrarLineas()
         {
             //return Lineas.ToList();
-            return Lineas;
+            return Lineas.ToList();
         }
 
-        public void AgregarLinea(LineaVenta lv)
+        /*public void AgregarLinea(LineaVenta lv)
         {
             Lineas.Add(lv);
-        }
+        } */
 
         public void AgregarProductos(ProductoBE p, int cantidad)
         {
@@ -55,7 +55,7 @@ namespace BusinessEntities
             }
             if(band==false)
             {
-                LineaVenta lv = new LineaVenta(p, cantidad);
+                LineaVenta lv = new LineaVenta(p, cantidad, this);
                 Lineas.Add(lv);
             }
         } 

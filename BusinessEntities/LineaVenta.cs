@@ -21,10 +21,11 @@ namespace BusinessEntities
         public LineaVenta()
         {}
 
-        public LineaVenta(ProductoBE p, int c)
+        public LineaVenta(ProductoBE p, int c, Venta v)
         {
             IdProd = p.IdProd;
             Cantidad = c;
+            VentaId = v.Id;
         }
 
     }

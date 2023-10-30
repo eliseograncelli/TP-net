@@ -10,10 +10,10 @@ namespace BusinessLogic
 {
     public class VentaBL
     {
-        /*public string AgregarVenta(Venta v)
+        public string AgregarVenta(Venta v)
         {
             VentaData venta = new VentaData();
-            return venta.Equals(v);
-        } */
+            return venta.AgregarVenta(v);
+        } 
     }
 }

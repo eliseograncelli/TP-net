@@ -9,16 +9,18 @@ namespace DataAccess
 {
     public class VentaData
     {
-        /*public string AgregarVenta(Venta v)
+        public string AgregarVenta(Venta v)
         {
             try
             {
                 using(var dbContext = new AppDBContext())
                 {
-                    
+                    dbContext.Ventas.Add(v);
+                    dbContext.SaveChanges();
+                    return "Compra confirmada";
                 }
             }
             catch (Exception ex) { return ex.Message;}
-        }   */
+        }   
     }
 }

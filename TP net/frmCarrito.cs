@@ -30,8 +30,8 @@ namespace TP_net
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            /*VentaBL ventaBL = new VentaBL();
-            ventaBL.AgregarVenta(v); */
+            VentaBL ventaBL = new VentaBL();
+            MessageBox.Show(ventaBL.AgregarVenta(v)); 
         } 
     }
 }
