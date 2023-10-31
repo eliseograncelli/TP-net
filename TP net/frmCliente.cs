@@ -24,7 +24,7 @@ namespace TP_net
             txtUsuario.Text = us.Nombre.ToString() + " " + us.Apellido.ToString();
             v = new Venta(us);
             AgregarControles(v);
-
+            MessageBox.Show("¡SI COMPRAS 10 O MAS UNIDADES DE UN PRODUCTO OBTENES UN DESCUENTO!", "Te avisamos...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         List<ProductoBE> listado = new List<ProductoBE>();
@@ -96,8 +96,16 @@ namespace TP_net
             } */
             
             //Venta v = new Venta(uss);
-            frmCarrito frm = new frmCarrito(v);
-            frm.Show();
+            if(v.Lineas.Count == 0)
+            {
+                MessageBox.Show("Carrito vacio");
+            }
+            else
+            {
+                frmCarrito frm = new frmCarrito(v);
+                frm.Show();
+            }
+
 
         }
     }

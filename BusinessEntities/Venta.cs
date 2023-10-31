@@ -42,7 +42,7 @@ namespace BusinessEntities
             Lineas.Add(lv);
         } */
 
-        public void AgregarProductos(ProductoBE p, int cantidad)
+        /*public void AgregarProductos(ProductoBE p, int cantidad)
         {
             bool band = false;
             foreach(LineaVenta misLineas in Lineas)
@@ -51,6 +51,7 @@ namespace BusinessEntities
                 {
                     misLineas.Cantidad = cantidad;
                     band = true;
+                    
                 }
             }
             if(band==false)
@@ -58,7 +59,35 @@ namespace BusinessEntities
                 LineaVenta lv = new LineaVenta(p, cantidad, this);
                 Lineas.Add(lv);
             }
-        } 
+        } */
+
+        public void AgregarProductos(ProductoBE p, int cantidad)
+        {
+            bool band = false;
+            for(int i = Lineas.Count - 1; i >= 0; i--)
+            {
+                LineaVenta linea = Lineas[i];
+
+                if(linea.IdProd == p.IdProd)
+                {
+                    if(cantidad == 0)
+                    {
+                        Lineas.RemoveAt(i);
+                    }
+                    else
+                    {
+                        linea.Cantidad = cantidad;
+                    }
+                    return;
+                }
+            }
+            if(cantidad != 0)
+            {
+                LineaVenta lv = new LineaVenta(p, cantidad, this);
+                Lineas.Add(lv);
+            }
+            
+        }
 
 
     }

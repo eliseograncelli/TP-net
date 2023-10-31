@@ -28,29 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvCarrito = new DataGridView();
             btnConfirmar = new Button();
             label1 = new Label();
             txtNombre = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvCarrito).BeginInit();
+            flwCarrito = new FlowLayoutPanel();
             SuspendLayout();
-            // 
-            // dgvCarrito
-            // 
-            dgvCarrito.BackgroundColor = SystemColors.MenuText;
-            dgvCarrito.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCarrito.GridColor = SystemColors.WindowText;
-            dgvCarrito.Location = new Point(12, 42);
-            dgvCarrito.Name = "dgvCarrito";
-            dgvCarrito.RowTemplate.Height = 25;
-            dgvCarrito.Size = new Size(609, 305);
-            dgvCarrito.TabIndex = 0;
             // 
             // btnConfirmar
             // 
             btnConfirmar.BackColor = Color.Lime;
             btnConfirmar.ForeColor = SystemColors.ControlLightLight;
-            btnConfirmar.Location = new Point(505, 334);
+            btnConfirmar.Location = new Point(622, 334);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(105, 48);
             btnConfirmar.TabIndex = 1;
@@ -77,29 +65,34 @@
             txtNombre.TabIndex = 3;
             txtNombre.Text = "label2";
             // 
+            // flwCarrito
+            // 
+            flwCarrito.Location = new Point(12, 39);
+            flwCarrito.Name = "flwCarrito";
+            flwCarrito.Size = new Size(728, 332);
+            flwCarrito.TabIndex = 4;
+            // 
             // frmCarrito
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(633, 394);
-            Controls.Add(txtNombre);
+            ClientSize = new Size(752, 394);
             Controls.Add(btnConfirmar);
+            Controls.Add(flwCarrito);
+            Controls.Add(txtNombre);
             Controls.Add(label1);
-            Controls.Add(dgvCarrito);
             ForeColor = SystemColors.Window;
             Name = "frmCarrito";
             Text = "frmCarrito";
-            ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        public DataGridView dgvCarrito;
         private Button btnConfirmar;
         private Label label1;
         public Label txtNombre;
+        private FlowLayoutPanel flwCarrito;
     }
 }
