@@ -86,20 +86,11 @@ namespace BusinessEntities
                 LineaVenta lv = new LineaVenta(p, cantidad, this);
                 Lineas.Add(lv);
             }
-            
         }
 
         public void EliminaLinea(int id)
         {
-            //foreach(LineaVenta linea in Lineas)
-            //{
-            //    if(linea.IdLinea == id)
-            //    {
-            //        Lineas.Remove(linea);
-            //    }
-            //}
             LineaVenta lv = Lineas.Where(l => l.IdLinea == id).FirstOrDefault();
-            
             Lineas.Remove(lv);
         }
 

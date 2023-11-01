@@ -47,7 +47,6 @@ namespace TP_net
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //if (int.TryParse(txtCantidad.Text, out int cantidad) && cantidad > 0)
             if (int.TryParse(txtCantidad.Text, out int cantidad))
 
                 {

@@ -34,35 +34,10 @@ namespace TP_net
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            //if(sender is Button btn)
-            //{
-            //    if(btn.Tag is Lineas_Control linea)
-            //    {
-            //        FlowLayoutPanel flw = this.Parent as FlowLayoutPanel;
-            //        flw.Controls.Remove(this);
-            //        flw.Refresh();
-            //        //Controls.Remove(linea);
-            //        //int idd = (int)btnEliminar.Tag;
-            //        ////v.EliminaLinea(idd);
-            //        ////v.Lineas.RemoveAt(idd);
-            //        //ProductoBE p = new ProductoBE(idd);
-            //        //int c = 0;
-            //        //v.AgregarProductos(p, c);
-
-            //    }
-            //}
             int lineaId = (int)this.Tag;
             v.EliminaLinea(lineaId);
             FlowLayoutPanel flw = this.Parent as FlowLayoutPanel;
             flw.Controls.Remove(this);
-            //flw.Refresh();
-
-
-
-
-            //Lineas_Control seleccionada = (Lineas_Control)sender;
-            //int idSeleccionada = (int)seleccionada.Tag;
-            //v.EliminaLinea(idSeleccionada);
 
         }
     }

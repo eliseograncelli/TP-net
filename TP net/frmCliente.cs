@@ -21,8 +21,9 @@ namespace TP_net
         public frmCliente(UsuarioBE us)
         {
             InitializeComponent();
-            txtUsuario.Text = us.Nombre.ToString() + " " + us.Apellido.ToString();
-            v = new Venta(us);
+            uss = us;
+            txtUsuario.Text = uss.Nombre.ToString() + " " + uss.Apellido.ToString();
+            v = new Venta(uss);
             AgregarControles(v);
             MessageBox.Show("¡SI COMPRAS 10 O MAS UNIDADES DE UN PRODUCTO OBTENES UN DESCUENTO!", "Te avisamos...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
@@ -116,11 +117,17 @@ namespace TP_net
 
         private void frmCliente_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MessageBox.Show("¿Desea cerrar la sesion? Se perderà la informacion de la compra actual", 
+            if (MessageBox.Show("¿Desea cerrar la sesion? Se perderà la informacion de la compra actual",
                 "Confirmar", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            frmMisCompras frm = new frmMisCompras(uss);
+            frm.Show();
         }
     }
 }

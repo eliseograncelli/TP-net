@@ -15,5 +15,11 @@ namespace BusinessLogic
             VentaData venta = new VentaData();
             return venta.AgregarVenta(v);
         } 
+
+        public List<Venta> ListarCompras(UsuarioBE us)
+        {
+            VentaData v = new VentaData();
+            return v.ListarCompras(us);
+        }
     }
 }

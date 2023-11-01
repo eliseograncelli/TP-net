@@ -74,7 +74,6 @@ namespace TP_net
             //    flwCarrito.Controls.Add(lc);
             //} 
 
-            // DE ACA
 
             foreach (LineaVenta lv in v.Lineas)
             {
@@ -105,7 +104,6 @@ namespace TP_net
                 flwCarrito.Controls.Add(lc);
             }
 
-            // HASTA ACA
 
 
 

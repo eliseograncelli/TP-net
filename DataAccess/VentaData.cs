@@ -21,6 +21,21 @@ namespace DataAccess
                 }
             }
             catch (Exception ex) { return ex.Message;}
-        }   
+        }
+
+        public List<Venta> ListarCompras(UsuarioBE us)
+        {
+            try
+            {
+                using (var dbContext = new AppDBContext())
+                {
+                    return dbContext.Ventas.Where(v => v.IdCliente == us.Id).ToList();
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }
