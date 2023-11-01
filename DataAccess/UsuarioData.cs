@@ -67,8 +67,6 @@ namespace DataAccess
             }
             else
             {
-                // Usuario no encontrado
-
                 return null;
             }
         }  // OK

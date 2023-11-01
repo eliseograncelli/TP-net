@@ -94,9 +94,9 @@ namespace TP_net
                     lineas.Add(lv);
                 }
             } */
-            
+
             //Venta v = new Venta(uss);
-            if(v.Lineas.Count == 0)
+            if (v.Lineas.Count == 0)
             {
                 MessageBox.Show("Carrito vacio");
             }
@@ -107,6 +107,20 @@ namespace TP_net
             }
 
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MessageBox.Show("¿Desea cerrar la sesion? Se perderà la informacion de la compra actual", 
+                "Confirmar", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

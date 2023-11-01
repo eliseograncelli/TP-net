@@ -48,28 +48,31 @@ namespace TP_net
             // txtNombreProd
             // 
             txtNombreProd.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            txtNombreProd.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombreProd.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
             txtNombreProd.ForeColor = SystemColors.ControlLightLight;
-            txtNombreProd.Location = new Point(204, 12);
+            txtNombreProd.Location = new Point(291, 20);
+            txtNombreProd.Margin = new Padding(4, 0, 4, 0);
             txtNombreProd.Name = "txtNombreProd";
-            txtNombreProd.Size = new Size(244, 32);
+            txtNombreProd.Size = new Size(349, 53);
             txtNombreProd.TabIndex = 0;
             txtNombreProd.Text = "Nombre de producto";
             // 
             // txtMarca
             // 
             txtMarca.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMarca.Location = new Point(204, 44);
+            txtMarca.Location = new Point(291, 73);
+            txtMarca.Margin = new Padding(4, 0, 4, 0);
             txtMarca.Name = "txtMarca";
-            txtMarca.Size = new Size(407, 33);
+            txtMarca.Size = new Size(581, 55);
             txtMarca.TabIndex = 1;
             txtMarca.Text = "Marca";
             // 
             // pbxFoto
             // 
-            pbxFoto.Location = new Point(12, 12);
+            pbxFoto.Location = new Point(17, 20);
+            pbxFoto.Margin = new Padding(4, 5, 4, 5);
             pbxFoto.Name = "pbxFoto";
-            pbxFoto.Size = new Size(186, 208);
+            pbxFoto.Size = new Size(266, 347);
             pbxFoto.SizeMode = PictureBoxSizeMode.Zoom;
             pbxFoto.TabIndex = 2;
             pbxFoto.TabStop = false;
@@ -77,9 +80,10 @@ namespace TP_net
             // txtDescripcion
             // 
             txtDescripcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDescripcion.Location = new Point(12, 269);
+            txtDescripcion.Location = new Point(17, 432);
+            txtDescripcion.Margin = new Padding(4, 0, 4, 0);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(436, 118);
+            txtDescripcion.Size = new Size(623, 197);
             txtDescripcion.TabIndex = 3;
             txtDescripcion.Text = "Descripcion producto";
             // 
@@ -87,36 +91,43 @@ namespace TP_net
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 235);
+            label1.Location = new Point(17, 392);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(224, 25);
+            label1.Size = new Size(336, 40);
             label1.TabIndex = 4;
             label1.Text = "Descripcion del producto";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(204, 80);
+            label2.ForeColor = SystemColors.ActiveBorder;
+            label2.Location = new Point(291, 133);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(87, 15);
+            label2.Size = new Size(129, 25);
             label2.TabIndex = 7;
             label2.Text = "Precio unitario:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(204, 127);
+            label3.ForeColor = SystemColors.ActiveBorder;
+            label3.Location = new Point(291, 212);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(158, 15);
+            label3.Size = new Size(241, 25);
             label3.TabIndex = 8;
             label3.Text = "Precio comprando 10 o más:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(204, 180);
+            label4.ForeColor = SystemColors.ActiveBorder;
+            label4.Location = new Point(291, 300);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(97, 15);
+            label4.Size = new Size(147, 25);
             label4.TabIndex = 9;
             label4.Text = "Stock disponible:";
             // 
@@ -124,9 +135,10 @@ namespace TP_net
             // 
             txtPrecioUnitario.AutoSize = true;
             txtPrecioUnitario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPrecioUnitario.Location = new Point(204, 99);
+            txtPrecioUnitario.Location = new Point(291, 158);
+            txtPrecioUnitario.Margin = new Padding(4, 0, 4, 0);
             txtPrecioUnitario.Name = "txtPrecioUnitario";
-            txtPrecioUnitario.Size = new Size(91, 21);
+            txtPrecioUnitario.Size = new Size(140, 32);
             txtPrecioUnitario.TabIndex = 10;
             txtPrecioUnitario.Text = "pcio unitaio";
             // 
@@ -135,9 +147,10 @@ namespace TP_net
             txtPrecioX10.AutoSize = true;
             txtPrecioX10.BackColor = SystemColors.WindowText;
             txtPrecioX10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPrecioX10.Location = new Point(204, 146);
+            txtPrecioX10.Location = new Point(291, 237);
+            txtPrecioX10.Margin = new Padding(4, 0, 4, 0);
             txtPrecioX10.Name = "txtPrecioX10";
-            txtPrecioX10.Size = new Size(70, 21);
+            txtPrecioX10.Size = new Size(106, 32);
             txtPrecioX10.TabIndex = 11;
             txtPrecioX10.Text = "pcio X10";
             // 
@@ -145,18 +158,19 @@ namespace TP_net
             // 
             txtStock.AutoSize = true;
             txtStock.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtStock.Location = new Point(204, 199);
+            txtStock.Location = new Point(291, 325);
+            txtStock.Margin = new Padding(4, 0, 4, 0);
             txtStock.Name = "txtStock";
-            txtStock.Size = new Size(46, 21);
+            txtStock.Size = new Size(69, 32);
             txtStock.TabIndex = 12;
             txtStock.Text = "stock";
             // 
             // frmDetalleProducto
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(460, 399);
+            ClientSize = new Size(657, 665);
             Controls.Add(txtStock);
             Controls.Add(txtPrecioX10);
             Controls.Add(txtPrecioUnitario);
@@ -169,6 +183,7 @@ namespace TP_net
             Controls.Add(txtMarca);
             Controls.Add(txtNombreProd);
             ForeColor = SystemColors.ControlLightLight;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmDetalleProducto";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DetalleProducto";

@@ -14,8 +14,8 @@ namespace DataAccess
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer($"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true");
-            //optionsBuilder.UseSqlServer($"Data Source=PC-Fili; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true");
+            //optionsBuilder.UseSqlServer($"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer($"Data Source=PC-Fili; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true");
             base.OnConfiguring(optionsBuilder);
         }
 

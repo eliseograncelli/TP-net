@@ -44,9 +44,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(76, 36);
+            label1.Location = new Point(109, 60);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(145, 28);
+            label1.Size = new Size(223, 41);
             label1.TabIndex = 0;
             label1.Text = "Inicio de sesión";
             // 
@@ -54,9 +55,10 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(54, 64);
+            label2.Location = new Point(77, 107);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(181, 15);
+            label2.Size = new Size(273, 25);
             label2.TabIndex = 1;
             label2.Text = "A continuación ingrese sus datos";
             // 
@@ -64,9 +66,10 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(54, 120);
+            label3.Location = new Point(77, 200);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(39, 15);
+            label3.Size = new Size(58, 25);
             label3.TabIndex = 2;
             label3.Text = "Email:";
             // 
@@ -74,41 +77,46 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(54, 173);
+            label4.Location = new Point(77, 288);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(70, 15);
+            label4.Size = new Size(105, 25);
             label4.TabIndex = 3;
             label4.Text = "Contraseña:";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(54, 138);
+            txtEmail.Location = new Point(77, 230);
+            txtEmail.Margin = new Padding(4, 5, 4, 5);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(181, 23);
+            txtEmail.Size = new Size(257, 31);
             txtEmail.TabIndex = 4;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(54, 191);
+            txtContraseña.Location = new Point(77, 318);
+            txtContraseña.Margin = new Padding(4, 5, 4, 5);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(181, 23);
+            txtContraseña.Size = new Size(257, 31);
             txtContraseña.TabIndex = 5;
             // 
             // lnkOlvidaPass
             // 
             lnkOlvidaPass.AutoSize = true;
-            lnkOlvidaPass.Location = new Point(116, 217);
+            lnkOlvidaPass.Location = new Point(166, 362);
+            lnkOlvidaPass.Margin = new Padding(4, 0, 4, 0);
             lnkOlvidaPass.Name = "lnkOlvidaPass";
-            lnkOlvidaPass.Size = new Size(119, 15);
+            lnkOlvidaPass.Size = new Size(179, 25);
             lnkOlvidaPass.TabIndex = 6;
             lnkOlvidaPass.TabStop = true;
             lnkOlvidaPass.Text = "Olvidé mi contraseña";
             // 
             // btnIniciarSesion
             // 
-            btnIniciarSesion.Location = new Point(88, 246);
+            btnIniciarSesion.Location = new Point(126, 410);
+            btnIniciarSesion.Margin = new Padding(4, 5, 4, 5);
             btnIniciarSesion.Name = "btnIniciarSesion";
-            btnIniciarSesion.Size = new Size(110, 44);
+            btnIniciarSesion.Size = new Size(157, 73);
             btnIniciarSesion.TabIndex = 7;
             btnIniciarSesion.Text = "Iniciar sesión";
             btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -117,9 +125,10 @@
             // lnkCrearCuenta
             // 
             lnkCrearCuenta.AutoSize = true;
-            lnkCrearCuenta.Location = new Point(12, 305);
+            lnkCrearCuenta.Location = new Point(17, 508);
+            lnkCrearCuenta.Margin = new Padding(4, 0, 4, 0);
             lnkCrearCuenta.Name = "lnkCrearCuenta";
-            lnkCrearCuenta.Size = new Size(96, 15);
+            lnkCrearCuenta.Size = new Size(145, 25);
             lnkCrearCuenta.TabIndex = 8;
             lnkCrearCuenta.TabStop = true;
             lnkCrearCuenta.Text = "No tengo cuenta";
@@ -128,10 +137,10 @@
             // frmInicioSesion
             // 
             AcceptButton = btnIniciarSesion;
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(294, 329);
+            ClientSize = new Size(430, 548);
             Controls.Add(lnkCrearCuenta);
             Controls.Add(btnIniciarSesion);
             Controls.Add(lnkOlvidaPass);
@@ -141,6 +150,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "frmInicioSesion";
             Text = "frmInicioSesion";
             ResumeLayout(false);

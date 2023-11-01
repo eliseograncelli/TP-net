@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace TP_net
 {
@@ -19,7 +20,7 @@ namespace TP_net
         {
             InitializeComponent();
             v = venta;
-            
+
         }
 
         private void Prod_Control_Load(object sender, EventArgs e)
@@ -44,15 +45,23 @@ namespace TP_net
             txtCantidad.Text = nro.ToString();
         }
 
-
-         private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtCantidad.Text, out int cantidad) && cantidad > 0)
             {
-                if (int.TryParse(txtCantidad.Text, out int cantidad) && cantidad > 0)
-                {
                 ProductoBE p = new ProductoBE(int.Parse(txtId.Text));
-                v.AgregarProductos(p, cantidad); 
-                }
+                v.AgregarProductos(p, cantidad);
             }
+        }
 
+        private void txtPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
