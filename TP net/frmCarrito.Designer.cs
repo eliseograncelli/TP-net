@@ -71,6 +71,7 @@
             flwCarrito.Name = "flwCarrito";
             flwCarrito.Size = new Size(728, 332);
             flwCarrito.TabIndex = 4;
+            flwCarrito.MouseUp += flwCarrito_MouseUp;
             // 
             // frmCarrito
             // 

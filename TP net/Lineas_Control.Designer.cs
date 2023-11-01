@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnEliminar = new Button();
             txtNLinea = new TextBox();
             txtNomProd = new TextBox();
             txtCantidad = new TextBox();
@@ -37,15 +37,16 @@
             txtMarca = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // btnEliminar
             // 
-            button1.BackColor = Color.Red;
-            button1.Location = new Point(633, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(89, 40);
-            button1.TabIndex = 3;
-            button1.Text = "Eliminar";
-            button1.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = Color.Red;
+            btnEliminar.Location = new Point(633, 3);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(89, 40);
+            btnEliminar.TabIndex = 3;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // txtNLinea
             // 
@@ -129,7 +130,7 @@
             Controls.Add(txtCantidad);
             Controls.Add(txtNomProd);
             Controls.Add(txtNLinea);
-            Controls.Add(button1);
+            Controls.Add(btnEliminar);
             Name = "Lineas_Control";
             Size = new Size(728, 46);
             ResumeLayout(false);
@@ -138,7 +139,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnEliminar;
         public TextBox txtNLinea;
         public TextBox txtNomProd;
         public TextBox txtCantidad;

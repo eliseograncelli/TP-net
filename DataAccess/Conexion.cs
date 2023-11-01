@@ -7,8 +7,8 @@ namespace DataAccess
 {
     public class Conexion
     {
-        private string cadenaConexion = $"Data Source=PC-Fili; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true";
-        //private string cadenaConexion = $"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true";
+        //private string cadenaConexion = $"Data Source=PC-Fili; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true";
+        private string cadenaConexion = $"Data Source=DESKTOP-JPRR102; Initial Catalog=dbSistema; Integrated Security =True; TrustServerCertificate=true";
         SqlConnection conexion;
 
 
