@@ -91,6 +91,15 @@ namespace TP_net.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a a.
+        /// </summary>
+        internal static string plantillahtml {
+            get {
+                return ResourceManager.GetString("plantillahtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap shopping {

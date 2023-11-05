@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TIENDA GIN - Comprobante de Compra</title>
+</head>
+<body>
+    <h1>Comprobante de Compra</h1>
+    <p>Usuario: <span id="usuario">@USUARIO</span></p>
+    <p>N° de compra: <span id="idcompra">@NCOMPRA</span></p>
+    <p>Fecha: <span id="fecha">@FECHA</span></p>
+
+    <table border="1">
+        <tr>
+            <th>ID Línea</th>
+            <th>Nombre del Producto</th>
+            <th>Marca</th>
+            <th>Cantidad Pedida</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+        </tr>
+        @HtmlRows
+    </table>
+
+    <p>Total de la Compra: <span id="totalCompra">@TOTAL</span></p>
+</body>
+</html>

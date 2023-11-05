@@ -16,7 +16,7 @@ namespace TP_net
     public partial class frmCliente : Form
     {
         internal UsuarioBE uss;
-        private Venta v;
+        private Venta v = null;
 
         public frmCliente(UsuarioBE us)
         {
@@ -24,6 +24,8 @@ namespace TP_net
             uss = us;
             txtUsuario.Text = uss.Nombre.ToString() + " " + uss.Apellido.ToString();
             v = new Venta(uss);
+            frmCarrito frm = new frmCarrito(v);
+            frm.LimpiarCarrito();
             AgregarControles(v);
             MessageBox.Show("¡SI COMPRAS 10 O MAS UNIDADES DE UN PRODUCTO OBTENES UN DESCUENTO!", "Te avisamos...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
