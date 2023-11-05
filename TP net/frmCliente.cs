@@ -42,6 +42,7 @@ namespace TP_net
                 productoControl.txtNombreProd.Text = producto.Nombre.ToString();
                 productoControl.txtPrecio.Text = "$" + producto.PrecioUnitario.ToString();
                 productoControl.txtId.Text = producto.IdProd.ToString();
+                productoControl.txtStock.Text = producto.stock.ToString();
                 byte[] fotoProd = producto.imagen;
                 if (fotoProd != null)
                 {

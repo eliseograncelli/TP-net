@@ -30,9 +30,16 @@ namespace TP_net
 
         private void btnAgregar_MouseClick(object sender, MouseEventArgs e)
         {
-            int nro = int.Parse(txtCantidad.Text);
-            nro++;
-            txtCantidad.Text = nro.ToString();
+            if (int.Parse(txtCantidad.Text) == int.Parse(txtStock.Text))
+            {
+                MessageBox.Show("Excedió cantidad disponible del producto");
+            }
+            else
+            {
+                int nro = int.Parse(txtCantidad.Text);
+                nro++;
+                txtCantidad.Text = nro.ToString();
+            }
         }
 
         private void button1_MouseClick(object sender, MouseEventArgs e)

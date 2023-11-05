@@ -57,4 +57,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ckbMostrarPass.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAXJJREFUOE+tUj2LwkAQjQnEIiCksIgIgoVgoaCF4P8QG/+AWBns0ii2KSXpbNTW
+        0h8hYmMvthaCIoqmerczMevl5I77Gni8ecPM20l2FRH4IxRMJhP8JgqFQmiw2+0+un4LFIL/0SCbzaLV
+        askGTdPQ6/WkTiQSrIlJvxgcj8eoyFgulzHdbDZZE5OmEPw0SKVSKJfLcoBOqtfrL/rTDX6KLw2KxSLW
+        6zWCIMBsNoOqqi890mA4HLJJpVJBu93modVqJRt1Xefa7XaDZVkYj8fcb5pmaECgE6hYKpX4Z1Kt2+3i
+        crlwbhgGbzIajeA4DtceCJPD4cAnUW7bNnMUtBXp6/XK3Gg0MBgMOBcIDebzOWq1Gueu6zJHcTqdWO/3
+        e+bpdIpqtcq5QGhA8DwP/X4f2+2WHxF9b/Sw6Ho7nQ42m837YcLTgJDP53E+n3G/33lVunPf93mTxWKB
+        ZDIZ6xeICQlqzGQyyOVySKfT8vHEoeANLTPRHD9Z9coAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
