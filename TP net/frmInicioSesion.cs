@@ -27,7 +27,7 @@ namespace TP_net
             {
                 if (usuario.Tipo == "Cliente")
                 {
-                    
+
                     frmCliente frm = new frmCliente(usuario);
                     frm.Show();
                     borrarCampos();
@@ -69,6 +69,18 @@ namespace TP_net
         {
             this.txtEmail.Text = string.Empty;
             this.txtContraseña.Text = string.Empty;
+        }
+
+        private void ckbMostrarPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbMostrarPass.Checked)
+            {
+                txtContraseña.PasswordChar = '*';
+            }
+            else
+            {
+                txtContraseña.PasswordChar = '\0';
+            }
         }
     }
 }

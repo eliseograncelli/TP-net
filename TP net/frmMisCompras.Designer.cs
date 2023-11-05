@@ -45,6 +45,7 @@
             // 
             // flwMisCompras
             // 
+            flwMisCompras.AutoScroll = true;
             flwMisCompras.Location = new Point(12, 106);
             flwMisCompras.Name = "flwMisCompras";
             flwMisCompras.Size = new Size(776, 305);

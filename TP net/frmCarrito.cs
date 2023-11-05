@@ -36,6 +36,11 @@ namespace TP_net
                 VentaBL ventaBL = new VentaBL();
                 v.Monto = Monto;
                 MessageBox.Show(ventaBL.AgregarVenta(v));
+                DialogResult comprobante = MessageBox.Show("¿Desea imprimir comprobante?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(comprobante == DialogResult.Yes)
+                {
+                    //ventaBL.ImprimirComprobante(v);
+                }
                 UsuarioBE us = new UsuarioBE(v.IdCliente);
                 UsuarioBL usuBL = new UsuarioBL();
                 frmCliente frm = new frmCliente(usuBL.BuscadorPorID(us));
