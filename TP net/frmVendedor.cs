@@ -1,5 +1,6 @@
 ﻿using BusinessEntities;
 using BusinessLogic;
+using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,9 @@ namespace TP_net
             this.idVendedor = usuario.Id;
             this.IDVendedorlabel.Text = usuario.Id.ToString();
             this.label4.Text = usuario.Nombre.ToString() + usuario.Apellido.ToString();
+            this.usuario = usuario;
         }
-
+        UsuarioBE usuario;
         int idVendedor;
 
         // Panel izquiero, botones de navegacion
@@ -59,6 +61,40 @@ namespace TP_net
         {
             this.splitContainer1.Panel2.Controls.Clear();
             this.splitContainer1.Panel2.Controls.Add(this.label3);
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            var lineas = RecuperarLineas();
+            var par = 0;
+            foreach (LineaVenta lv in lineas)
+            {
+
+                VentaVendedorController vvC = new VentaVendedorController();
+                Venta venta = VentaBL.getVenta(lv);
+                vvC.txtIDVenta.Text = venta.Id.ToString();
+                vvC.txtFechaVenta.Text = venta.fecha.ToString();
+                UsuarioBE cliente = UsuarioBL.getCliente(venta);
+                vvC.txtCliente.Text = cliente.Nombre.ToString();
+                ProductoBE producto = ProductoBL.buscarProducto(lv);
+                vvC.txtProd.Text = producto.Nombre.ToString();
+                vvC.txtCantidad.Text = lv.Cantidad.ToString();
+                float MontoTotal = 0;
+                if (par == 0)
+                {
+                    vvC.BackColor = Color.LightGray;
+                    par++;
+                }
+                else if (par == 1)
+                {
+                    vvC.BackColor = Color.DarkGray;
+                    par--;
+                }
+                if (lv.Cantidad <= 9)
+                {
+                    MontoTotal = producto.PrecioUnitario * lv.Cantidad;
+                }
+                else MontoTotal = producto.PrecioX10 * lv.Cantidad;
+                vvC.txtTotal.Text = MontoTotal.ToString();
+                flowLayoutPanel1.Controls.Add(vvC);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -153,6 +189,12 @@ namespace TP_net
             byte[] fotoProd = (byte[])dataGridView1.Rows[indice].Cells[8].Value;
             MemoryStream ms = new MemoryStream(fotoProd);
             pictureBox1.Image = Image.FromStream(ms);
+        }
+
+        private List<LineaVenta> RecuperarLineas()
+        {
+            VentaBL logica = new VentaBL();
+            return logica.ListarLineas(this.usuario);
         }
 
 

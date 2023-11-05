@@ -61,8 +61,10 @@ namespace BusinessLogic
             return usu.BuscarUsuPorId(us);
         }
 
-
-
-
+        public static UsuarioBE getCliente(Venta venta)
+        {
+            UsuarioData usuarioData=new UsuarioData();
+            return usuarioData.GetCliente(venta);
+        }
     }
 }

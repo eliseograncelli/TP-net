@@ -56,5 +56,11 @@ namespace BusinessLogic
             ProductoData prod = new ProductoData();
             return prod.BuscarProd(p);
         }
+
+        public static ProductoBE? buscarProducto(LineaVenta lV)
+        {
+            ProductoData pD = new ProductoData();
+            return pD.BuscarProdXlinea(lV);
+        }
     }
 }

@@ -10,6 +10,12 @@ namespace BusinessLogic
 {
     public class VentaBL
     {
+        public static Venta getVenta(LineaVenta lV)
+        {
+            VentaData v = new VentaData();
+            return v.GetVenta(lV);
+        }
+
         public string AgregarVenta(Venta v)
         {
             VentaData venta = new VentaData();
@@ -20,6 +26,12 @@ namespace BusinessLogic
         {
             VentaData v = new VentaData();
             return v.ListarCompras(us);
+        }
+
+        public List<LineaVenta> ListarLineas(UsuarioBE usuario)
+        {
+            VentaData datos = new VentaData();
+            return datos.ListarLineas(usuario);
         }
     }
 }

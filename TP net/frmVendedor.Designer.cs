@@ -38,6 +38,7 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             label12 = new Label();
             button8 = new Button();
             textBox7 = new TextBox();
@@ -92,6 +93,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(flowLayoutPanel1);
             splitContainer1.Panel2.Controls.Add(label12);
             splitContainer1.Panel2.Controls.Add(button8);
             splitContainer1.Panel2.Controls.Add(textBox7);
@@ -179,6 +181,16 @@
             button1.Text = "Productos";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AllowDrop = true;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.BackColor = Color.Transparent;
+            flowLayoutPanel1.Location = new Point(18, 97);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(920, 596);
+            flowLayoutPanel1.TabIndex = 26;
             // 
             // label12
             // 
@@ -512,5 +524,6 @@
         private Button button8;
         private TextBox textBox7;
         private Label label12;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

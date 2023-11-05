@@ -100,5 +100,12 @@ namespace DataAccess
 
         }
 
+        public UsuarioBE GetCliente(Venta venta)
+        {
+            using(var dbContext = new AppDBContext())
+            {
+                return dbContext.Usuarios.Where(u => u.Id == venta.IdCliente).ToList().FirstOrDefault();
+            }
+        }
     }
 }

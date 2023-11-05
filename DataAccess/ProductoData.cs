@@ -88,5 +88,13 @@ namespace DataAccess
                 return dbContext.Producto.Where(p => p.IdProd == prod.IdProd).ToList().FirstOrDefault();
             }
         }
+
+        public ProductoBE BuscarProdXlinea(LineaVenta lV)
+        {
+            using (var dbContext = new AppDBContext())
+            {
+                return dbContext.Producto.Where(p => p.IdProd == lV.IdProd).ToList().FirstOrDefault();
+            }
+        }
     }
 }

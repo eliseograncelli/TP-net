@@ -23,6 +23,7 @@ namespace DataAccess
         public DbSet<ProductoBE> Producto { get;set; }    
         public DbSet<UsuarioBE> Usuarios { get;set; }
         public DbSet<Venta> Ventas { get;set; }
+       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Venta>()
