@@ -42,88 +42,107 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(7, 10);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(10, 17);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(21, 15);
+            label1.Size = new Size(34, 25);
             label1.TabIndex = 0;
             label1.Text = "ID:";
             // 
             // txtId
             // 
             txtId.Enabled = false;
-            txtId.Location = new Point(7, 28);
+            txtId.Location = new Point(10, 47);
+            txtId.Margin = new Padding(4, 5, 4, 5);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(44, 23);
+            txtId.Size = new Size(61, 31);
             txtId.TabIndex = 1;
             // 
             // txtFecha
             // 
             txtFecha.Enabled = false;
-            txtFecha.Location = new Point(70, 28);
+            txtFecha.Location = new Point(100, 47);
+            txtFecha.Margin = new Padding(4, 5, 4, 5);
             txtFecha.Name = "txtFecha";
             txtFecha.ReadOnly = true;
-            txtFecha.Size = new Size(100, 23);
+            txtFecha.Size = new Size(141, 31);
             txtFecha.TabIndex = 2;
             // 
             // txtMonto
             // 
             txtMonto.Enabled = false;
-            txtMonto.Location = new Point(191, 28);
+            txtMonto.Location = new Point(273, 47);
+            txtMonto.Margin = new Padding(4, 5, 4, 5);
             txtMonto.Name = "txtMonto";
             txtMonto.ReadOnly = true;
-            txtMonto.Size = new Size(100, 23);
+            txtMonto.Size = new Size(141, 31);
             txtMonto.TabIndex = 3;
             // 
             // txtEstado
             // 
             txtEstado.Enabled = false;
-            txtEstado.Location = new Point(313, 28);
+            txtEstado.Location = new Point(447, 47);
+            txtEstado.Margin = new Padding(4, 5, 4, 5);
             txtEstado.Name = "txtEstado";
             txtEstado.ReadOnly = true;
-            txtEstado.Size = new Size(100, 23);
+            txtEstado.Size = new Size(141, 31);
             txtEstado.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(70, 10);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(100, 17);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(41, 15);
+            label2.Size = new Size(61, 25);
             label2.TabIndex = 5;
             label2.Text = "Fecha:";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(191, 10);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(273, 17);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(46, 15);
+            label3.Size = new Size(70, 25);
             label3.TabIndex = 6;
             label3.Text = "Monto:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(313, 10);
+            label4.ForeColor = SystemColors.ButtonHighlight;
+            label4.Location = new Point(447, 17);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(45, 15);
+            label4.Size = new Size(70, 25);
             label4.TabIndex = 7;
             label4.Text = "Estado:";
             // 
             // btnDetalles
             // 
-            btnDetalles.Location = new Point(443, 10);
+            btnDetalles.BackColor = Color.Silver;
+            btnDetalles.FlatStyle = FlatStyle.Popup;
+            btnDetalles.ForeColor = SystemColors.ActiveCaptionText;
+            btnDetalles.Location = new Point(596, 47);
+            btnDetalles.Margin = new Padding(4, 5, 4, 5);
             btnDetalles.Name = "btnDetalles";
-            btnDetalles.Size = new Size(102, 52);
+            btnDetalles.Size = new Size(150, 31);
             btnDetalles.TabIndex = 8;
             btnDetalles.Text = "DETALLES";
-            btnDetalles.UseVisualStyleBackColor = true;
+            btnDetalles.UseVisualStyleBackColor = false;
+            btnDetalles.Click += btnDetalles_Click;
             // 
             // MisCompras_Control
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Transparent;
             Controls.Add(btnDetalles);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -133,8 +152,9 @@
             Controls.Add(txtFecha);
             Controls.Add(txtId);
             Controls.Add(label1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "MisCompras_Control";
-            Size = new Size(551, 73);
+            Size = new Size(758, 89);
             ResumeLayout(false);
             PerformLayout();
         }

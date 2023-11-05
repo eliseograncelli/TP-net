@@ -15,6 +15,7 @@ namespace TP_net
     public partial class frmCarrito : Form
     {
         private Venta v;
+        private float Monto = 0;
         public frmCarrito(Venta venta)
         {
             InitializeComponent();
@@ -22,23 +23,25 @@ namespace TP_net
             UsuarioBE us = new UsuarioBE(v.IdCliente);
             UsuarioBL user = new UsuarioBL();
             us = user.BuscadorPorID(us);
-
+            fecha.Text = DateTime.Now.ToString();
             txtNombre.Text = us.Nombre + " " + us.Apellido;
             //dgvCarrito.DataSource = v.MostrarLineas();
             Llenaflw();
-
         }
-
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            VentaBL ventaBL = new VentaBL();
-            MessageBox.Show(ventaBL.AgregarVenta(v));
-            UsuarioBE us = new UsuarioBE(v.IdCliente);
-            UsuarioBL usuBL = new UsuarioBL();
-            frmCliente frm = new frmCliente(usuBL.BuscadorPorID(us));
-            this.Dispose();
-
+            if (v.Lineas.Count() != 0)
+            {
+                VentaBL ventaBL = new VentaBL();
+                v.Monto = Monto;
+                MessageBox.Show(ventaBL.AgregarVenta(v));
+                UsuarioBE us = new UsuarioBE(v.IdCliente);
+                UsuarioBL usuBL = new UsuarioBL();
+                frmCliente frm = new frmCliente(usuBL.BuscadorPorID(us));
+                this.Dispose();
+            }
+            else MessageBox.Show("Agrega algun producto al carrito");
         }
 
         private void Llenaflw()
@@ -102,10 +105,9 @@ namespace TP_net
                 lc.txtSubTotal.Text = "$" + subtotal.ToString();
                 lc.Tag = lv.IdLinea;
                 flwCarrito.Controls.Add(lc);
+                Monto = Monto + subtotal;
             }
-
-
-
+            this.txtMonto.Text = "$" + Monto.ToString();
 
             /*        
           {

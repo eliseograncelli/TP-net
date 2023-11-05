@@ -16,5 +16,15 @@ namespace TP_net
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            return;
+        }
     }
 }

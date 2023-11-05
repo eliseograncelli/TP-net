@@ -19,7 +19,6 @@ namespace TP_net
         public frmMisCompras(UsuarioBE us)
         {
             InitializeComponent();
-
             VentaBL v = new VentaBL();
             compras = v.ListarCompras(us);
             LlenaFlw(compras);

@@ -53,7 +53,7 @@ namespace TP_net
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(149, 29);
+            label1.Size = new Size(221, 40);
             label1.TabIndex = 1;
             label1.Text = "TIENDA GIN";
             // 
@@ -65,7 +65,7 @@ namespace TP_net
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(231, 27);
             label2.Name = "label2";
-            label2.Size = new Size(62, 15);
+            label2.Size = new Size(91, 22);
             label2.TabIndex = 2;
             label2.Text = "Productos";
             // 
@@ -77,7 +77,7 @@ namespace TP_net
             lblCarrito.ForeColor = SystemColors.ControlLightLight;
             lblCarrito.Location = new Point(864, 27);
             lblCarrito.Name = "lblCarrito";
-            lblCarrito.Size = new Size(43, 15);
+            lblCarrito.Size = new Size(64, 22);
             lblCarrito.TabIndex = 3;
             lblCarrito.Text = "Carrito";
             lblCarrito.MouseClick += lblCarrito_MouseClick;
@@ -90,7 +90,7 @@ namespace TP_net
             label4.ForeColor = SystemColors.ControlLightLight;
             label4.Location = new Point(697, 27);
             label4.Name = "label4";
-            label4.Size = new Size(80, 15);
+            label4.Size = new Size(114, 22);
             label4.TabIndex = 4;
             label4.Text = "Mis Compras";
             label4.Click += label4_Click;
@@ -103,7 +103,7 @@ namespace TP_net
             label5.ForeColor = SystemColors.ControlLightLight;
             label5.Location = new Point(507, 24);
             label5.Name = "label5";
-            label5.Size = new Size(80, 15);
+            label5.Size = new Size(118, 22);
             label5.TabIndex = 5;
             label5.Text = "Cerrar sesión";
             label5.Click += label5_Click;
@@ -122,7 +122,7 @@ namespace TP_net
             txtUsuario.AutoSize = true;
             txtUsuario.Location = new Point(12, 62);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(41, 15);
+            txtUsuario.Size = new Size(58, 22);
             txtUsuario.TabIndex = 6;
             txtUsuario.Text = "label3";
             // 
@@ -158,7 +158,7 @@ namespace TP_net
             // 
             // frmCliente
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
             ClientSize = new Size(940, 659);

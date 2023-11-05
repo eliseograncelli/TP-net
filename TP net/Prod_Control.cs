@@ -49,9 +49,9 @@ namespace TP_net
         {
             if (int.TryParse(txtCantidad.Text, out int cantidad))
 
-                {
-                    ProductoBE p = new ProductoBE(int.Parse(txtId.Text));
-                    v.AgregarProductos(p, cantidad);
+            {
+                ProductoBE p = new ProductoBE(int.Parse(txtId.Text));
+                v.AgregarProductos(p, cantidad);
             }
         }
 
