@@ -75,11 +75,11 @@ namespace TP_net
         {
             if (ckbMostrarPass.Checked)
             {
-                txtContraseña.PasswordChar = '*';
+                txtContraseña.PasswordChar = '\0';
             }
             else
             {
-                txtContraseña.PasswordChar = '\0';
+                txtContraseña.PasswordChar = '*';
             }
         }
     }
