@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informe de Ventas</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Informe de Ventas - TIENDA GIN</h1>
+
+    <h3>Vendedor: @VENDEDOR</h3>
+    <p>Fecha: @FECHA</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID Venta</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Fecha de Venta</th>
+                <th>Costo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @HtmlRows
+        </tbody>
+    </table>
+    <p>Monto total de ventas: @TOTAL</p>
+</body>
+</html>

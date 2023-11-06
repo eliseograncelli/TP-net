@@ -1,6 +1,9 @@
 ﻿using BusinessEntities;
 using BusinessLogic;
 using DataAccess;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using iTextSharp.tool.xml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +68,7 @@ namespace TP_net
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.label13);
             this.splitContainer1.Panel2.Controls.Add(this.txtTotal);
+            this.splitContainer1.Panel2.Controls.Add(this.btnImprimir);
             float MontoVendedor = 0;
             flowLayoutPanel1.Controls.Clear();
             var lineas = RecuperarLineas();
@@ -106,8 +110,44 @@ namespace TP_net
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.splitContainer1.Panel2.Controls.Clear();
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            string paginaHtml = Properties.Resources.plantillaVendedor.ToString();
+            paginaHtml = paginaHtml.Replace("@VENDEDOR", this.usuario.Nombre.ToString() + " " + this.usuario.Apellido.ToString());
+            paginaHtml = paginaHtml.Replace("@FECHA", DateTime.Now.ToString());
+            var htmlRows = new StringBuilder();
+            foreach (VentaVendedorController vvc in this.flowLayoutPanel1.Controls)
+            {
+                htmlRows.Append("<tr>");
+                htmlRows.Append($"<td>{vvc.txtIDVenta.Text}</td>");
+                htmlRows.Append($"<td>{vvc.txtProd.Text}</td>");
+                htmlRows.Append($"<td>{vvc.txtCantidad.Text}</td>");
+                htmlRows.Append($"<td>{vvc.txtFechaVenta.Text}</td>");
+                htmlRows.Append($"<td>{vvc.txtTotal.Text}</td>");
+                htmlRows.Append("</tr>");
+            }
+            paginaHtml = paginaHtml.Replace("@TOTAL", this.txtTotal.Text);
+            paginaHtml = paginaHtml.Replace("@HtmlRows", htmlRows.ToString());
+
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.FileName = DateTime.Now.ToString("dd-MM-yyyy") + ".pdf";
+            if (guardar.ShowDialog() == DialogResult.OK)
+            {
+                using (FileStream stream = new FileStream(guardar.FileName, FileMode.Create))
+                {
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+                    using (StringReader sr = new StringReader(paginaHtml))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+            }
+        
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -116,7 +156,7 @@ namespace TP_net
             file.Filter = "archivos de imagen (*jpg; *png;) | *jpg; *png;";
             if (file.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(file.FileName);
+                pictureBox1.Image = System.Drawing.Image.FromFile(file.FileName);
             }
         }
 
@@ -195,7 +235,7 @@ namespace TP_net
             textBox7.Text = dataGridView1.Rows[indice].Cells[9].Value.ToString();
             byte[] fotoProd = (byte[])dataGridView1.Rows[indice].Cells[8].Value;
             MemoryStream ms = new MemoryStream(fotoProd);
-            pictureBox1.Image = Image.FromStream(ms);
+            pictureBox1.Image = System.Drawing.Image.FromStream(ms);
         }
 
         private List<LineaVenta> RecuperarLineas()

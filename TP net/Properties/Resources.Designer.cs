@@ -91,11 +91,64 @@ namespace TP_net.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a a.
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;TIENDA GIN - Comprobante de Compra&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;h1&gt;Comprobante de Compra&lt;/h1&gt;
+        ///    &lt;p&gt;Usuario: &lt;span id=&quot;usuario&quot;&gt;@USUARIO&lt;/span&gt;&lt;/p&gt;
+        ///    &lt;p&gt;N° de compra: &lt;span id=&quot;idcompra&quot;&gt;@NCOMPRA&lt;/span&gt;&lt;/p&gt;
+        ///    &lt;p&gt;Fecha: &lt;span id=&quot;fecha&quot;&gt;@FECHA&lt;/span&gt;&lt;/p&gt;
+        ///
+        ///    &lt;table border=&quot;1&quot;&gt;
+        ///        &lt;tr&gt;
+        ///            &lt;th&gt;ID Línea&lt;/th&gt;
+        ///            &lt;th&gt;Nombre del Producto&lt;/th&gt;
+        ///            &lt;th&gt;Marca&lt;/th&gt;
+        ///            &lt;th&gt;Cantidad Pedida&lt;/th&gt;
+        ///            &lt;th&gt;Precio U [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string plantillahtml {
             get {
                 return ResourceManager.GetString("plantillahtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Informe de Ventas&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        table {
+        ///            width: 100%;
+        ///            border-collapse: collapse;
+        ///        }
+        ///
+        ///        table, th, td {
+        ///            border: 1px solid black;
+        ///        }
+        ///
+        ///        th, td {
+        ///            padding: 8px;
+        ///            text-align: left;
+        ///        }
+        ///    &lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///    &lt;h1&gt;Informe de Ventas - TIENDA GIN&lt;/h1&gt;
+        ///
+        ///    &lt;table&gt;
+        ///        &lt;thead&gt;
+        ///            &lt;tr&gt;
+        ///                &lt;th&gt;ID Venta&lt;/th&gt;
+        ///         [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string plantillaVendedor {
+            get {
+                return ResourceManager.GetString("plantillaVendedor", resourceCulture);
             }
         }
         
