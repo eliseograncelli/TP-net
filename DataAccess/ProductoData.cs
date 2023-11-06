@@ -96,5 +96,15 @@ namespace DataAccess
                 return dbContext.Producto.Where(p => p.IdProd == lV.IdProd).ToList().FirstOrDefault();
             }
         }
+
+        public void RestarSotck(LineaVenta lv)
+        {
+            using (var dbContext = new AppDBContext())
+            {
+                var producto = dbContext.Producto.Find(lv.IdProd);
+                producto.stock = producto.stock - lv.Cantidad;
+                dbContext.SaveChanges();
+            }
+        }
     }
 }

@@ -62,5 +62,11 @@ namespace BusinessLogic
             ProductoData pD = new ProductoData();
             return pD.BuscarProdXlinea(lV);
         }
+
+        public static void RestarStock(LineaVenta lv)
+        {
+            ProductoData pd = new ProductoData();
+            pd.RestarSotck(lv);
+        }
     }
 }

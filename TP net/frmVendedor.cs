@@ -23,6 +23,7 @@ namespace TP_net
             this.IDVendedorlabel.Text = usuario.Id.ToString();
             this.label4.Text = usuario.Nombre.ToString() + usuario.Apellido.ToString();
             this.usuario = usuario;
+            this.splitContainer1.Panel2.Controls.Clear();
         }
         UsuarioBE usuario;
         int idVendedor;
@@ -62,6 +63,10 @@ namespace TP_net
             this.splitContainer1.Panel2.Controls.Clear();
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Panel2.Controls.Add(this.label13);
+            this.splitContainer1.Panel2.Controls.Add(this.txtTotal);
+            float MontoVendedor = 0;
+            flowLayoutPanel1.Controls.Clear();
             var lineas = RecuperarLineas();
             var par = 0;
             foreach (LineaVenta lv in lineas)
@@ -92,9 +97,11 @@ namespace TP_net
                     MontoTotal = producto.PrecioUnitario * lv.Cantidad;
                 }
                 else MontoTotal = producto.PrecioX10 * lv.Cantidad;
+                MontoVendedor = MontoVendedor + MontoTotal;
                 vvC.txtTotal.Text = MontoTotal.ToString();
                 flowLayoutPanel1.Controls.Add(vvC);
             }
+            this.txtTotal.Text = "$" + MontoVendedor.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)

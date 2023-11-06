@@ -38,6 +38,8 @@
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            label13 = new Label();
+            label3 = new Label();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label12 = new Label();
             button8 = new Button();
@@ -62,9 +64,9 @@
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            txtTotal = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -93,6 +95,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            splitContainer1.Panel2.Controls.Add(txtTotal);
+            splitContainer1.Panel2.Controls.Add(label13);
+            splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(flowLayoutPanel1);
             splitContainer1.Panel2.Controls.Add(label12);
             splitContainer1.Panel2.Controls.Add(button8);
@@ -117,7 +122,6 @@
             splitContainer1.Panel2.Controls.Add(textBox1);
             splitContainer1.Panel2.Controls.Add(pictureBox1);
             splitContainer1.Panel2.Controls.Add(dataGridView1);
-            splitContainer1.Panel2.Controls.Add(label3);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Panel2.Controls.Add(label1);
             splitContainer1.Panel2MinSize = 950;
@@ -154,17 +158,17 @@
             // 
             // button3
             // 
-            button3.Location = new Point(21, 233);
+            button3.Location = new Point(21, 286);
             button3.Name = "button3";
             button3.Size = new Size(200, 54);
             button3.TabIndex = 2;
-            button3.Text = "Entregas pendientes";
+            button3.Text = "VENTAS";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(21, 296);
+            button2.Location = new Point(21, 217);
             button2.Name = "button2";
             button2.Size = new Size(200, 54);
             button2.TabIndex = 1;
@@ -178,9 +182,34 @@
             button1.Name = "button1";
             button1.Size = new Size(200, 54);
             button1.TabIndex = 0;
-            button1.Text = "Productos";
+            button1.Text = "PRODUCTOS";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.ForeColor = SystemColors.ControlLightLight;
+            label13.Location = new Point(652, 671);
+            label13.Name = "label13";
+            label13.Size = new Size(134, 25);
+            label13.TabIndex = 6;
+            label13.Text = "Total de ventas:";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label3.BackColor = SystemColors.AppWorkspace;
+            label3.BorderStyle = BorderStyle.Fixed3D;
+            label3.Font = new Font("Modern No. 20", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(18, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(920, 56);
+            label3.TabIndex = 2;
+            label3.Text = "VENTAS";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            label3.Click += label3_Click;
             // 
             // flowLayoutPanel1
             // 
@@ -189,7 +218,7 @@
             flowLayoutPanel1.BackColor = Color.Transparent;
             flowLayoutPanel1.Location = new Point(18, 97);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(920, 596);
+            flowLayoutPanel1.Size = new Size(920, 560);
             flowLayoutPanel1.TabIndex = 26;
             // 
             // label12
@@ -430,20 +459,6 @@
             dataGridView1.TabIndex = 3;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label3.BackColor = SystemColors.AppWorkspace;
-            label3.BorderStyle = BorderStyle.Fixed3D;
-            label3.Font = new Font("Modern No. 20", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(18, 18);
-            label3.Name = "label3";
-            label3.Size = new Size(920, 56);
-            label3.TabIndex = 2;
-            label3.Text = "Entregas Pendientes";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += label3_Click;
-            // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -454,7 +469,7 @@
             label2.Name = "label2";
             label2.Size = new Size(920, 56);
             label2.TabIndex = 1;
-            label2.Text = "Reportes";
+            label2.Text = "REPORTES";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -467,8 +482,19 @@
             label1.Name = "label1";
             label1.Size = new Size(920, 56);
             label1.TabIndex = 0;
-            label1.Text = "Productos";
+            label1.Text = "PRODUCTOS";
             label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // txtTotal
+            // 
+            txtTotal.AutoSize = true;
+            txtTotal.BackColor = Color.Transparent;
+            txtTotal.ForeColor = SystemColors.ControlLightLight;
+            txtTotal.Location = new Point(792, 671);
+            txtTotal.Name = "txtTotal";
+            txtTotal.Size = new Size(134, 25);
+            txtTotal.TabIndex = 27;
+            txtTotal.Text = "Total de ventas:";
             // 
             // frmVendedor
             // 
@@ -525,5 +551,7 @@
         private TextBox textBox7;
         private Label label12;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Label label13;
+        private Label txtTotal;
     }
 }

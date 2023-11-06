@@ -33,6 +33,10 @@ namespace TP_net
         {
             if (v.Lineas.Count() != 0)
             {
+                foreach(LineaVenta lv in v.Lineas)
+                {
+                    ProductoBL.RestarStock(lv);
+                }
                 VentaBL ventaBL = new VentaBL();
                 v.Monto = Monto;
                 MessageBox.Show(ventaBL.AgregarVenta(v));
