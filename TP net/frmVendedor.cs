@@ -147,7 +147,7 @@ namespace TP_net
                     stream.Close();
                 }
             }
-        
+
         }
 
         private void button4_Click(object sender, EventArgs e)

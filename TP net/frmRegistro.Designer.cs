@@ -37,7 +37,6 @@ namespace TP_net
             label5 = new Label();
             label7 = new Label();
             label8 = new Label();
-            ckbMayorista = new CheckBox();
             txtDni = new TextBox();
             txtNombre = new TextBox();
             txtApellido = new TextBox();
@@ -56,10 +55,9 @@ namespace TP_net
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(241, 25);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(169, 15);
             label1.Name = "label1";
-            label1.Size = new Size(287, 41);
+            label1.Size = new Size(188, 28);
             label1.TabIndex = 0;
             label1.Text = "Registro de usuarios";
             // 
@@ -67,10 +65,9 @@ namespace TP_net
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(74, 157);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(52, 94);
             label2.Name = "label2";
-            label2.Size = new Size(47, 25);
+            label2.Size = new Size(30, 15);
             label2.TabIndex = 1;
             label2.Text = "DNI:";
             // 
@@ -78,10 +75,9 @@ namespace TP_net
             // 
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(74, 245);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(52, 147);
             label3.Name = "label3";
-            label3.Size = new Size(87, 25);
+            label3.Size = new Size(57, 15);
             label3.TabIndex = 2;
             label3.Text = "Nombre: ";
             // 
@@ -89,10 +85,9 @@ namespace TP_net
             // 
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(74, 333);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(52, 200);
             label4.Name = "label4";
-            label4.Size = new Size(82, 25);
+            label4.Size = new Size(54, 15);
             label4.TabIndex = 3;
             label4.Text = "Apellido:";
             // 
@@ -100,10 +95,9 @@ namespace TP_net
             // 
             label5.AutoSize = true;
             label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(74, 513);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(52, 308);
             label5.Name = "label5";
-            label5.Size = new Size(105, 25);
+            label5.Size = new Size(70, 15);
             label5.TabIndex = 4;
             label5.Text = "Contraseña:";
             // 
@@ -112,10 +106,9 @@ namespace TP_net
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(163, 72);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(114, 43);
             label7.Name = "label7";
-            label7.Size = new Size(454, 41);
+            label7.Size = new Size(297, 28);
             label7.TabIndex = 6;
             label7.Text = "A continuacion ingrese sus datos";
             // 
@@ -123,77 +116,57 @@ namespace TP_net
             // 
             label8.AutoSize = true;
             label8.ForeColor = SystemColors.ControlLightLight;
-            label8.Location = new Point(74, 423);
-            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Location = new Point(52, 254);
             label8.Name = "label8";
-            label8.Size = new Size(58, 25);
+            label8.Size = new Size(39, 15);
             label8.TabIndex = 7;
             label8.Text = "Email:";
             // 
-            // ckbMayorista
-            // 
-            ckbMayorista.AutoSize = true;
-            ckbMayorista.ForeColor = Color.White;
-            ckbMayorista.Location = new Point(466, 453);
-            ckbMayorista.Margin = new Padding(4, 5, 4, 5);
-            ckbMayorista.Name = "ckbMayorista";
-            ckbMayorista.Size = new Size(174, 29);
-            ckbMayorista.TabIndex = 8;
-            ckbMayorista.Text = "Cliente mayorista";
-            ckbMayorista.UseVisualStyleBackColor = true;
-            ckbMayorista.CheckedChanged += ckbMayorista_CheckedChanged;
-            // 
             // txtDni
             // 
-            txtDni.Location = new Point(74, 187);
-            txtDni.Margin = new Padding(4, 5, 4, 5);
+            txtDni.Location = new Point(52, 112);
             txtDni.Name = "txtDni";
-            txtDni.Size = new Size(253, 31);
+            txtDni.Size = new Size(178, 23);
             txtDni.TabIndex = 2;
             txtDni.KeyPress += txtDni_KeyPress;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(74, 275);
-            txtNombre.Margin = new Padding(4, 5, 4, 5);
+            txtNombre.Location = new Point(52, 165);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(253, 31);
+            txtNombre.Size = new Size(178, 23);
             txtNombre.TabIndex = 3;
             txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(74, 363);
-            txtApellido.Margin = new Padding(4, 5, 4, 5);
+            txtApellido.Location = new Point(52, 218);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(253, 31);
+            txtApellido.Size = new Size(178, 23);
             txtApellido.TabIndex = 4;
             txtApellido.KeyPress += txtApellido_KeyPress;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(74, 453);
-            txtEmail.Margin = new Padding(4, 5, 4, 5);
+            txtEmail.Location = new Point(52, 272);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(253, 31);
+            txtEmail.Size = new Size(178, 23);
             txtEmail.TabIndex = 5;
             txtEmail.Validating += txtEmail_Validating;
             // 
             // txtContraseña
             // 
-            txtContraseña.Location = new Point(74, 543);
-            txtContraseña.Margin = new Padding(4, 5, 4, 5);
+            txtContraseña.Location = new Point(52, 326);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(253, 31);
+            txtContraseña.Size = new Size(178, 23);
             txtContraseña.TabIndex = 6;
             // 
             // btnCrearCuenta
             // 
             btnCrearCuenta.ForeColor = SystemColors.WindowText;
-            btnCrearCuenta.Location = new Point(506, 592);
-            btnCrearCuenta.Margin = new Padding(4, 5, 4, 5);
+            btnCrearCuenta.Location = new Point(354, 355);
             btnCrearCuenta.Name = "btnCrearCuenta";
-            btnCrearCuenta.Size = new Size(221, 87);
+            btnCrearCuenta.Size = new Size(155, 52);
             btnCrearCuenta.TabIndex = 10;
             btnCrearCuenta.Text = "Crear cuenta";
             btnCrearCuenta.UseVisualStyleBackColor = true;
@@ -203,10 +176,9 @@ namespace TP_net
             // 
             ckbVendedor.AutoSize = true;
             ckbVendedor.ForeColor = SystemColors.ControlLightLight;
-            ckbVendedor.Location = new Point(466, 495);
-            ckbVendedor.Margin = new Padding(4, 5, 4, 5);
+            ckbVendedor.Location = new Point(326, 297);
             ckbVendedor.Name = "ckbVendedor";
-            ckbVendedor.Size = new Size(115, 29);
+            ckbVendedor.Size = new Size(76, 19);
             ckbVendedor.TabIndex = 9;
             ckbVendedor.Text = "Vendedor";
             ckbVendedor.UseVisualStyleBackColor = true;
@@ -214,20 +186,18 @@ namespace TP_net
             // 
             // imgFoto
             // 
-            imgFoto.Location = new Point(469, 187);
-            imgFoto.Margin = new Padding(4, 5, 4, 5);
+            imgFoto.Location = new Point(328, 112);
             imgFoto.Name = "imgFoto";
-            imgFoto.Size = new Size(166, 172);
+            imgFoto.Size = new Size(116, 103);
             imgFoto.TabIndex = 18;
             imgFoto.TabStop = false;
             // 
             // btnExaminar
             // 
             btnExaminar.ForeColor = SystemColors.WindowText;
-            btnExaminar.Location = new Point(497, 368);
-            btnExaminar.Margin = new Padding(4, 5, 4, 5);
+            btnExaminar.Location = new Point(348, 221);
             btnExaminar.Name = "btnExaminar";
-            btnExaminar.Size = new Size(107, 38);
+            btnExaminar.Size = new Size(75, 23);
             btnExaminar.TabIndex = 7;
             btnExaminar.Text = "Examinar";
             btnExaminar.UseVisualStyleBackColor = true;
@@ -236,19 +206,18 @@ namespace TP_net
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(471, 157);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(330, 94);
             label6.Name = "label6";
-            label6.Size = new Size(170, 25);
+            label6.Size = new Size(114, 15);
             label6.TabIndex = 20;
             label6.Text = "Cargue una imagen:";
             // 
             // frmRegistro
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(744, 698);
+            ClientSize = new Size(521, 419);
             Controls.Add(label6);
             Controls.Add(btnExaminar);
             Controls.Add(imgFoto);
@@ -259,7 +228,6 @@ namespace TP_net
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
             Controls.Add(txtDni);
-            Controls.Add(ckbMayorista);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label5);
@@ -268,7 +236,6 @@ namespace TP_net
             Controls.Add(label2);
             Controls.Add(label1);
             ForeColor = SystemColors.ControlLightLight;
-            Margin = new Padding(4, 5, 4, 5);
             Name = "frmRegistro";
             Text = "frmRegistro";
             ((System.ComponentModel.ISupportInitialize)imgFoto).EndInit();
@@ -285,7 +252,6 @@ namespace TP_net
         private Label label5;
         private Label label7;
         private Label label8;
-        private CheckBox ckbMayorista;
         private TextBox txtDni;
         private TextBox txtNombre;
         private TextBox txtApellido;

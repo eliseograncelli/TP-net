@@ -54,7 +54,10 @@ namespace BusinessEntities
             {
                 this.Tipo = tipo;
             }
-            this.Estado = "Inactivo";
+            if(tipo == "Vendedor")
+            {
+                this.Estado = "Inactivo";
+            }
         }
 
         public UsuarioBE(int id, int dNI, string nombre, string apellido, string email, byte[] foto, string password, string tipo, string estado)

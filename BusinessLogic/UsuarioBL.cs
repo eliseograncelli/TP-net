@@ -17,7 +17,7 @@ namespace BusinessLogic
             UsuarioData usuData = new UsuarioData();
             if (usuData.GuardarUsuario(usuNuevo) == "true")
             {
-                return usuNuevo.Nombre;
+                return "Cuentra creada con exito";
             }
             else
             {

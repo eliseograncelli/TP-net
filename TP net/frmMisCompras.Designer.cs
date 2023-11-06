@@ -48,7 +48,7 @@
             flwMisCompras.AutoScroll = true;
             flwMisCompras.Location = new Point(12, 106);
             flwMisCompras.Name = "flwMisCompras";
-            flwMisCompras.Size = new Size(776, 305);
+            flwMisCompras.Size = new Size(561, 305);
             flwMisCompras.TabIndex = 1;
             // 
             // frmMisCompras
@@ -56,7 +56,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowText;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(584, 450);
             Controls.Add(flwMisCompras);
             Controls.Add(label1);
             ForeColor = SystemColors.Window;

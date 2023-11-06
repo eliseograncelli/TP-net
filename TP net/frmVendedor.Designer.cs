@@ -125,8 +125,8 @@
             splitContainer1.Panel2.Controls.Add(dataGridView1);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Panel2.Controls.Add(label1);
-            splitContainer1.Size = new Size(931, 423);
-            splitContainer1.SplitterDistance = 269;
+            splitContainer1.Size = new Size(985, 423);
+            splitContainer1.SplitterDistance = 237;
             splitContainer1.TabIndex = 0;
             // 
             // IDVendedorlabel
@@ -214,7 +214,7 @@
             label3.Location = new Point(13, 11);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(711, 34);
+            label3.Size = new Size(625, 34);
             label3.TabIndex = 2;
             label3.Text = "VENTAS";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -359,7 +359,7 @@
             textBox6.Margin = new Padding(2);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(383, 92);
+            textBox6.Size = new Size(297, 92);
             textBox6.TabIndex = 16;
             // 
             // button4
@@ -499,7 +499,7 @@
             dataGridView1.RowHeadersWidth = 11;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView1.RowTemplate.Height = 200;
-            dataGridView1.Size = new Size(719, 127);
+            dataGridView1.Size = new Size(633, 127);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -512,7 +512,7 @@
             label2.Location = new Point(13, 11);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(711, 34);
+            label2.Size = new Size(625, 34);
             label2.TabIndex = 1;
             label2.Text = "REPORTES";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -526,7 +526,7 @@
             label1.Location = new Point(13, 11);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(711, 34);
+            label1.Size = new Size(625, 34);
             label1.TabIndex = 0;
             label1.Text = "PRODUCTOS";
             label1.TextAlign = ContentAlignment.MiddleCenter;

@@ -23,18 +23,13 @@ namespace TP_net
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
             string tipo = null;
-            if (ckbMayorista.Checked)
-            {
-                tipo = "Cliente mayorista";
-            }
-            else
-            {
+
                 if (ckbVendedor.Checked)
                 {
                     tipo = "Vendedor";
                 }
 
-            }
+            
             if (txtDni.Text == "" || txtNombre.Text == "" || txtApellido.Text == "" || txtEmail.Text == "" || txtContraseña.Text == "" || imgFoto.Image == null)
             {
                 MessageBox.Show("Todos los campos deben estar completos");
@@ -51,29 +46,29 @@ namespace TP_net
 
         private void ckbMayorista_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckbMayorista.Checked == true)
-            {
-                ckbVendedor.ForeColor = Color.Gray;
-                ckbVendedor.Checked = false;
-            }
-            else
-            {
-                ckbVendedor.ForeColor = Color.White;
-            }
+            //if (ckbMayorista.Checked == true)
+            //{
+            //    ckbVendedor.ForeColor = Color.Gray;
+            //    ckbVendedor.Checked = false;
+            //}
+            //else
+            //{
+            //    ckbVendedor.ForeColor = Color.White;
+            //}
         }
 
         private void ckbVendedor_CheckedChanged(object sender, EventArgs e)
         {
-            if (ckbVendedor.Checked == true)
-            {
-                ckbMayorista.ForeColor = Color.Gray;
-                ckbMayorista.Checked = false;
+            //if (ckbVendedor.Checked == true)
+            //{
+            //    ckbMayorista.ForeColor = Color.Gray;
+            //    ckbMayorista.Checked = false;
 
-            }
-            else
-            {
-                ckbMayorista.ForeColor = Color.White;
-            }
+            //}
+            //else
+            //{
+            //    ckbMayorista.ForeColor = Color.White;
+            //}
         }
 
         private void btnExaminar_Click(object sender, EventArgs e)
